@@ -17,7 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="474dp"
             android:background="@drawable/picture_name"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:contentDescription="TODO" />
 
         <Button
             android:id="@+id/find_restaurant"
@@ -25,7 +26,6 @@
             android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:text="근처 음식점 찾기" />
-
         <Button
             android:id="@+id/find_recipe"
             android:layout_width="match_parent"
