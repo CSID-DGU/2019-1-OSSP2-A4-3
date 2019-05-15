@@ -1,0 +1,154 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:2:1-27:12
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b75960867708e54cbba1a972ef244b5a\AndroidManifest.xml:17:1-22:12
+MERGED from [org.tensorflow:tensorflow-lite:1.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\d511cada215b48217ec289591159e9d2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\67fa2c3a912dd1bd76794fa4ed4a3b32\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\29f9e7105e48349b4871a9e9ba946f74\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\360b6d6c9635c487452e7dd8d5c48b55\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\780cc9cb6198893b145b363023094628\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\fe2a4709e3d475ce7e2bb42561e8bdee\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\767e9f242914c8d347429665499ab83d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.0.2] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b1807165c68ce9b4c851e98b1d536e40\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\6a32871ec2ddafeff3a0c5d7a378436c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\a5c949bdcedf11b36e3b404a5d94a2d1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\3ea035ab09f3b4dd50f9453f70eafd29\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\5619c4bf81d027ef4809c84b1aec2dae\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\71ff8f518be6954e5dfd1c0f4fbf0608\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-22:12
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:5:5-20:19
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:25:5-20
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:25:5-20
+MERGED from [org.tensorflow:tensorflow-lite:1.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\d511cada215b48217ec289591159e9d2\AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite:1.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\d511cada215b48217ec289591159e9d2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\67fa2c3a912dd1bd76794fa4ed4a3b32\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\67fa2c3a912dd1bd76794fa4ed4a3b32\AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.amitshekhar.tflite.SubActivity
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:12:9-58
+	android:name
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:12:19-46
+activity#com.amitshekhar.tflite.MainActivity
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:13:9-19:20
+	android:name
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:13:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:14:13-18:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:15:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:17:27-74
+uses-sdk
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:6:5-8:41
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b75960867708e54cbba1a972ef244b5a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b75960867708e54cbba1a972ef244b5a\AndroidManifest.xml:20:5-44
+MERGED from [org.tensorflow:tensorflow-lite:1.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\d511cada215b48217ec289591159e9d2\AndroidManifest.xml:5:5-7:41
+MERGED from [org.tensorflow:tensorflow-lite:1.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\d511cada215b48217ec289591159e9d2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\67fa2c3a912dd1bd76794fa4ed4a3b32\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\67fa2c3a912dd1bd76794fa4ed4a3b32\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\29f9e7105e48349b4871a9e9ba946f74\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\29f9e7105e48349b4871a9e9ba946f74\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\360b6d6c9635c487452e7dd8d5c48b55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\360b6d6c9635c487452e7dd8d5c48b55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\780cc9cb6198893b145b363023094628\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\780cc9cb6198893b145b363023094628\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\fe2a4709e3d475ce7e2bb42561e8bdee\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\fe2a4709e3d475ce7e2bb42561e8bdee\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\767e9f242914c8d347429665499ab83d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\767e9f242914c8d347429665499ab83d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.0.2] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b1807165c68ce9b4c851e98b1d536e40\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.0.2] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b1807165c68ce9b4c851e98b1d536e40\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\6a32871ec2ddafeff3a0c5d7a378436c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\6a32871ec2ddafeff3a0c5d7a378436c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\a5c949bdcedf11b36e3b404a5d94a2d1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\a5c949bdcedf11b36e3b404a5d94a2d1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\3ea035ab09f3b4dd50f9453f70eafd29\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\3ea035ab09f3b4dd50f9453f70eafd29\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\5619c4bf81d027ef4809c84b1aec2dae\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\5619c4bf81d027ef4809c84b1aec2dae\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\71ff8f518be6954e5dfd1c0f4fbf0608\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\71ff8f518be6954e5dfd1c0f4fbf0608\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:10:22-78
+uses-permission#android.permission.CAMERA
+ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:11:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:12:5-71
+	android:name
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:12:22-68
+uses-feature#android.hardware.camera
+ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:14:5-60
+	android:name
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:14:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:15:5-17:36
+	android:required
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:17:9-33
+	android:name
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:16:9-57
+uses-feature#android.hardware.camera.front
+ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:18:5-20:36
+	android:required
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:20:9-33
+	android:name
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:19:9-53
+uses-feature#android.hardware.microphone
+ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:21:5-23:36
+	android:required
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:23:9-33
+	android:name
+		ADDED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:22:9-51
