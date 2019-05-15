@@ -31,7 +31,7 @@ import static java.security.AccessController.getContext;
  * Created by User on 10/2/2017.
  */
 
-public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class    MapActivity extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
