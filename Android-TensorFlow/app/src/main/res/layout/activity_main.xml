@@ -43,6 +43,33 @@
 
     </LinearLayout>
 
+    <!--처음에 버튼 안보임 결과창!-->
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/result1"
+        android:layout_gravity="bottom|start"
+        android:layout_marginLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:text="Button" />
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/result2"
+        android:layout_gravity="bottom|center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:text="Button" />
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/result3"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:text="Button" />
+    <!--처음에 버튼 안보임 결과창!-->
 
     <Button
         android:id="@+id/btnToggleCamera"
@@ -63,5 +90,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/black"
         android:visibility="gone" />
+
+
 
 </FrameLayout>

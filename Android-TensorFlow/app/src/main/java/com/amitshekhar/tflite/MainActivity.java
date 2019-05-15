@@ -1,5 +1,6 @@
 package com.amitshekhar.tflite;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private Executor executor = Executors.newSingleThreadExecutor();
     private TextView textViewResult;
     private Button btnDetectObject, btnToggleCamera;
+    private Button resultButton1,resultButton2,resultButton3;
     private ImageView imageViewResult;
     private CameraView cameraView;
 
@@ -44,8 +46,12 @@ public class MainActivity extends AppCompatActivity {
         textViewResult = findViewById(R.id.textViewResult);
         textViewResult.setMovementMethod(new ScrollingMovementMethod());
 
+        final Intent result_button_click = new Intent(this, SubActivity.class);
         btnToggleCamera = findViewById(R.id.btnToggleCamera);
         btnDetectObject = findViewById(R.id.btnDetectObject);
+        resultButton1 = findViewById(R.id.result1);
+        resultButton2 = findViewById(R.id.result2);
+        resultButton3 = findViewById(R.id.result3);
 
         cameraView.addCameraKitListener(new CameraKitEventListener() {
             @Override
@@ -71,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
 
                 textViewResult.setText(results.toString());
 
+                resultButton1.setVisibility(View.VISIBLE);
+                resultButton2.setVisibility(View.VISIBLE);
+                resultButton3.setVisibility(View.VISIBLE);
+
             }
 
             @Override
@@ -78,6 +88,28 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        //result버튼 눌럿을 때 이동
+        resultButton1.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                startActivity(result_button_click);
+            }
+        });
+        resultButton2.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                startActivity(result_button_click);
+            }
+        });
+        resultButton3.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                startActivity(result_button_click);
+            }
+        });
+
 
         btnToggleCamera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
         btnDetectObject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 cameraView.captureImage();
             }
         });
