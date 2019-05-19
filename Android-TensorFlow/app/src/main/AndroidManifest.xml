@@ -16,11 +16,12 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDoFl2b-yoQ9gxQmp5K4ieIGXfxI-HTIRo"/>
+            android:value="AIzaSyCapA8W9u8hPsO1tKb0yX04L41nYUBVa30"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <activity android:name=".MapActivity"></activity>
         <activity android:name=".SubActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>

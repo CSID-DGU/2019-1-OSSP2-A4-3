@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:2:1-27:12
 MERGED from [com.google.android.gms:play-services:11.4.2] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\4d9b9ab4ef9ef7c57428f17748720819\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-cast-framework:11.4.2] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\d3b1a3d80d1a07f64580ba5d4107d142\AndroidManifest.xml:2:1-9:12
@@ -125,20 +125,20 @@ MERGED from [com.google.android.gms:play-services-wallet-license:11.4.2] C:\User
 MERGED from [com.google.android.gms:play-services-wearable-license:11.4.2] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\a6a235d13b9223af8f2d3b40b18759ca\AndroidManifest.xml:2:1-6:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\5619c4bf81d027ef4809c84b1aec2dae\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\71ff8f518be6954e5dfd1c0f4fbf0608\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:11-69
@@ -201,7 +201,7 @@ MERGED from [com.google.firebase:firebase-iid:11.4.2] C:\Users\wnddk\.gradle\cac
 	android:name
 		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:8:22-76
 application
-ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:10:5-32:19
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:10:5-33:19
 MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:25:5-20
 MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\b0bc5b6220cfad2911114a9ce86ccf30\AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services:11.4.2] C:\Users\wnddk\.gradle\caches\transforms-2\files-2.1\4d9b9ab4ef9ef7c57428f17748720819\AndroidManifest.xml:5:5-20
@@ -426,24 +426,28 @@ MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\wndd
 		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:22:13-66
 	android:name
 		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:21:13-58
-activity#com.amitshekhar.tflite.SubActivity
+activity#com.amitshekhar.tflite.MapActivity
 ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:24:9-58
 	android:name
 		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:24:19-46
+activity#com.amitshekhar.tflite.SubActivity
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:25:9-58
+	android:name
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:25:19-46
 activity#com.amitshekhar.tflite.MainActivity
-ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:25:9-31:20
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:26:9-32:20
 	android:name
-		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:25:19-47
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:26:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:26:13-30:29
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:30:27-74
 uses-sdk
 INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\wnddk\Desktop\20190515\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml

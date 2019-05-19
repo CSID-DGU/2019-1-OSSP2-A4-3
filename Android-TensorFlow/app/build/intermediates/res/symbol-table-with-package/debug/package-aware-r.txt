@@ -1205,6 +1205,7 @@ id bottom
 id btnDetectObject
 id btnToggleCamera
 id button
+id button2
 id buttonPanel
 id button_0
 id button_1
