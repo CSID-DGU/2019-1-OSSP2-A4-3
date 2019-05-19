@@ -1,0 +1,179 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\wnddk\\Desktop\\20190515\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\2ec427269842a2427ad3ef2de922af5c\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4,5",
+                        "startColumns": "0,0",
+                        "startOffsets": "233,335",
+                        "endColumns": "101,90",
+                        "endOffsets": "334,425"
+                    },
+                    "to": {
+                        "startLines": "75,76",
+                        "startColumns": "4,4",
+                        "startOffsets": "8602,8708",
+                        "endColumns": "105,94",
+                        "endOffsets": "8703,8798"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\b75960867708e54cbba1a972ef244b5a\\res\\values-sq\\values-sq.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,319,431,518,628,751,832,911,994,1100,1205,1303,1409,1512,1628,1782,1881",
+                        "endColumns": "113,99,111,86,109,122,80,78,82,105,104,97,105,102,115,153,98,80",
+                        "endOffsets": "214,314,426,513,623,746,827,906,989,1095,1200,1298,1404,1507,1623,1777,1876,1957"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,83",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,319,431,518,628,751,832,911,994,1100,1205,1303,1409,1512,1628,1782,9353",
+                        "endColumns": "113,99,111,86,109,122,80,78,82,105,104,97,105,102,115,153,98,80",
+                        "endOffsets": "214,314,426,513,623,746,827,906,989,1095,1200,1298,1404,1507,1623,1777,1876,9429"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\d3b1a3d80d1a07f64580ba5d4107d142\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "298,374,475,557,669,747,920,1034,1150,1279,1380,1481,1556,1649,1745,1849,1930,2004,2073,2146,2239,2335,2436,2534,2637,2707,2819,2912,3006,3110,3254,3346,3441,3539",
+                        "endColumns": "75,100,81,111,77,172,113,115,128,100,100,74,92,95,103,80,73,68,72,92,95,100,97,102,69,111,92,93,103,143,91,94,97,81",
+                        "endOffsets": "373,474,556,668,746,919,1033,1149,1278,1379,1480,1555,1648,1744,1848,1929,2003,2072,2145,2238,2334,2435,2533,2636,2706,2818,2911,3005,3109,3253,3345,3440,3538,3620"
+                    },
+                    "to": {
+                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1881,1961,2066,2152,2268,2350,2527,2645,2765,2898,3003,3108,3187,3284,3384,3492,3945,4023,4096,4173,4270,4370,4475,4577,4684,4758,4874,4971,5069,5177,5321,5417,5516,5618",
+                        "endColumns": "79,104,85,115,81,176,117,119,132,104,104,78,96,99,107,84,77,72,76,96,99,104,101,106,73,115,96,97,107,143,95,98,101,85",
+                        "endOffsets": "1956,2061,2147,2263,2345,2522,2640,2760,2893,2998,3103,3182,3279,3379,3487,3572,4018,4091,4168,4265,4365,4470,4572,4679,4753,4869,4966,5064,5172,5316,5412,5511,5613,5699"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\31817dfb1e10c65e74b9241e48e662f3\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "187",
+                        "endOffsets": "472"
+                    },
+                    "to": {
+                        "startLines": "63",
+                        "startColumns": "4",
+                        "startOffsets": "6767",
+                        "endColumns": "187",
+                        "endOffsets": "6950"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\6a32871ec2ddafeff3a0c5d7a378436c\\res\\values-sq\\values-sq.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "84",
+                        "startColumns": "4",
+                        "startOffsets": "9434",
+                        "endColumns": "100",
+                        "endOffsets": "9530"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\a69b5b0b0fb72f00bdb604c214a12af5\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "230",
+                        "endColumns": "102",
+                        "endOffsets": "332"
+                    },
+                    "to": {
+                        "startLines": "74",
+                        "startColumns": "4",
+                        "startOffsets": "8495",
+                        "endColumns": "106",
+                        "endOffsets": "8597"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\53d2f2d9f6a0fbe5df856af7079e9c56\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "283,388,593,728,833,1053,1185,1326,1555,1661,1867,2003,2231,2441,2532,2625",
+                        "endColumns": "104,204,134,104,219,131,140,228,105,205,135,227,209,90,92,106",
+                        "endOffsets": "387,592,727,832,1052,1184,1325,1554,1660,1866,2002,2230,2440,2531,2624,2731"
+                    },
+                    "to": {
+                        "startLines": "56,57,58,59,60,61,62,64,65,66,67,68,69,70,71,72",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5704,5813,6018,6157,6266,6486,6622,6955,7184,7294,7500,7640,7868,8082,8177,8274",
+                        "endColumns": "108,204,138,108,219,135,144,228,109,205,139,227,213,94,96,110",
+                        "endOffsets": "5808,6013,6152,6261,6481,6617,6762,7179,7289,7495,7635,7863,8077,8172,8269,8380"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\0e94f8218253e684266a04b86dbfcdbc\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6",
+                        "startColumns": "0,0,0",
+                        "startOffsets": "288,422,560",
+                        "endColumns": "133,137,91",
+                        "endOffsets": "421,559,651"
+                    },
+                    "to": {
+                        "startLines": "35,36,37",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "3577,3711,3849",
+                        "endColumns": "133,137,95",
+                        "endOffsets": "3706,3844,3940"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\8b1d0a704c40fa3dce0496a1d1d30f98\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "245",
+                        "endColumns": "105",
+                        "endOffsets": "350"
+                    },
+                    "to": {
+                        "startLines": "73",
+                        "startColumns": "4",
+                        "startOffsets": "8385",
+                        "endColumns": "109",
+                        "endOffsets": "8490"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\5ddfc17811852543beb24bdea287d912\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9",
+                        "startColumns": "0,0,0,0,0,0",
+                        "startOffsets": "237,307,434,497,561,648",
+                        "endColumns": "69,126,62,63,86,114",
+                        "endOffsets": "306,433,496,560,647,762"
+                    },
+                    "to": {
+                        "startLines": "77,78,79,80,81,82",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "8803,8877,9008,9075,9143,9234",
+                        "endColumns": "73,130,66,67,90,118",
+                        "endOffsets": "8872,9003,9070,9138,9229,9348"
+                    }
+                }
+            ]
+        }
+    ]
+}
