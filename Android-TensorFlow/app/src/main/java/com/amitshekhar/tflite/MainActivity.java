@@ -1,183 +1,79 @@
 package com.amitshekhar.tflite;
 
+
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.method.ScrollingMovementMethod;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.wonderkiln.camerakit.CameraKitError;
-import com.wonderkiln.camerakit.CameraKitEvent;
-import com.wonderkiln.camerakit.CameraKitEventListener;
-import com.wonderkiln.camerakit.CameraKitImage;
-import com.wonderkiln.camerakit.CameraKitVideo;
-import com.wonderkiln.camerakit.CameraView;
-
-import java.util.List;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
+import android.widget.Toast;
+import java.io.InputStream;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String MODEL_PATH = "mobilenet_quant_v1_224.tflite";
-    private static final boolean QUANT = true;
-    private static final String LABEL_PATH = "labels.txt";
-    private static final int INPUT_SIZE = 299;
+    public static Context context;
+    public Bitmap img;
+    public boolean isFromAlbum = false;
 
-    private Classifier classifier;
-
-    private Executor executor = Executors.newSingleThreadExecutor();
-    private TextView textViewResult;
-    private Button btnDetectObject, btnToggleCamera;
-    private Button resultButton1,resultButton2,resultButton3;
-    private ImageView imageViewResult;
-    private CameraView cameraView;
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        cameraView = findViewById(R.id.cameraView);
-        imageViewResult = findViewById(R.id.imageViewResult);
-        textViewResult = findViewById(R.id.textViewResult);
-        textViewResult.setMovementMethod(new ScrollingMovementMethod());
 
-        final Intent result_button_click = new Intent(this, SubActivity.class);
-        btnToggleCamera = findViewById(R.id.btnToggleCamera);
-        btnDetectObject = findViewById(R.id.btnDetectObject);
-        resultButton1 = findViewById(R.id.result1);
-        resultButton2 = findViewById(R.id.result2);
-        resultButton3 = findViewById(R.id.result3);
-
-        cameraView.addCameraKitListener(new CameraKitEventListener() {
+        Button take_picture = (Button) findViewById(R.id.take_picture);
+        take_picture.setOnClickListener(new Button.OnClickListener() {
             @Override
-            public void onEvent(CameraKitEvent cameraKitEvent) {
-
-            }
-
-            @Override
-            public void onError(CameraKitError cameraKitError) {
-
-            }
-
-            @Override
-            public void onImage(CameraKitImage cameraKitImage) {
-
-                Bitmap bitmap = cameraKitImage.getBitmap();
-
-                bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
-
-                imageViewResult.setImageBitmap(bitmap);
-
-                final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
-
-                textViewResult.setText(results.toString());
-
-                resultButton1.setVisibility(View.VISIBLE);
-                resultButton2.setVisibility(View.VISIBLE);
-                resultButton3.setVisibility(View.VISIBLE);
-
-            }
-
-            @Override
-            public void onVideo(CameraKitVideo cameraKitVideo) {
-
+            public void onClick(View view) {
+                Intent intent_camera = new Intent(MainActivity.this, CameraActivity.class);
+                startActivity(intent_camera);
             }
         });
+        //todo : recipe 선택
+        //아직 어떻게 할지 모르겠음
 
-
-        //result버튼 눌럿을 때 이동
-        resultButton1.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-                startActivity(result_button_click);
+        //todo : 앨범에서 사진 선택
+        Button openimg = (Button) findViewById(R.id.select_album);
+        openimg.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent_album = new Intent(Intent.ACTION_GET_CONTENT);
+                intent_album.setType("image/*");
+                intent_album.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent_album, 1);
             }
         });
-        resultButton2.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-                startActivity(result_button_click);
-            }
-        });
-        resultButton3.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-                startActivity(result_button_click);
-            }
-        });
-
-
-        btnToggleCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cameraView.toggleFacing();
-            }
-        });
-
-        btnDetectObject.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                cameraView.captureImage();
-            }
-        });
-
-        initTensorFlowAndLoadModel();
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        cameraView.start();
-    }
-
-    @Override
-    protected void onPause() {
-        cameraView.stop();
-        super.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                classifier.close();
-            }
-        });
-    }
-
-    private void initTensorFlowAndLoadModel() {
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request we're responding to
+        if (requestCode == 1) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
                 try {
-                    classifier = TensorFlowImageClassifier.create(
-                            getAssets(),
-                            MODEL_PATH,
-                            LABEL_PATH,
-                            INPUT_SIZE,
-                            QUANT);
-                    makeButtonVisible();
-                } catch (final Exception e) {
-                    throw new RuntimeException("Error initializing TensorFlow!", e);
+                    // 선택한 이미지에서 비트맵 생성
+                    InputStream in = getContentResolver().openInputStream(data.getData());
+                    img = BitmapFactory.decodeStream(in);
+                    in.close();
+
+                    isFromAlbum = true;
+                    context = this;
+                    //camera activity로 넘어감
+                    Intent intent_camera = new Intent(MainActivity.this, CameraActivity.class);
+                    startActivity(intent_camera);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
-        });
-    }
+        }
 
-    private void makeButtonVisible() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                btnDetectObject.setVisibility(View.VISIBLE);
-            }
-        });
+
     }
 }
+

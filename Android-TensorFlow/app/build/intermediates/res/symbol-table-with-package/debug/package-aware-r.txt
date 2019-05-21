@@ -1072,6 +1072,7 @@ drawable ic_vol_type_speaker_group_light
 drawable ic_vol_type_speaker_light
 drawable ic_vol_type_tv_dark
 drawable ic_vol_type_tv_light
+drawable main_image
 drawable mr_button_connected_dark
 drawable mr_button_connected_light
 drawable mr_button_connecting_dark
@@ -1203,6 +1204,7 @@ id blurred_background_image_view
 id book_now
 id bottom
 id btnDetectObject
+id btnSelectAlbum
 id btnToggleCamera
 id button
 id button2
@@ -1296,6 +1298,7 @@ id icon_view
 id ifRoom
 id image
 id imageView
+id imageView2
 id imageViewResult
 id index_entity_types
 id info
@@ -1411,6 +1414,7 @@ id search_src_text
 id search_voice_btn
 id seek_bar
 id seek_bar_controls
+id select_album
 id select_dialog_listview
 id selectionDetails
 id shortcut
@@ -1441,6 +1445,7 @@ id surface_view_container
 id tabMode
 id tab_host
 id tag_transition_group
+id take_picture
 id tap
 id tapWithMarker
 id terrain
@@ -1512,6 +1517,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_camera
 layout activity_main
 layout activity_map
 layout activity_sub

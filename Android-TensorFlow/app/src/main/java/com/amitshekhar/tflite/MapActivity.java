@@ -2,6 +2,7 @@ package com.amitshekhar.tflite;
 
 import android.*;
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -81,6 +82,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                             currentLocation = (Location) task.getResult();
                             moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM);
+                            findRestaurants();
                         }else{
                             Log.d(TAG, "onComplete: current location is null");
                             Toast.makeText(MapActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
@@ -147,8 +149,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
     }
     //////////////////Show Current Location  - End //////////////////
-    public void findRestaurants(View v)
+    public void findRestaurants()
     {
+        //Intent intent_camera = new Intent(MapActivity.this, MapActivity.class);
+        //startActivity(intent_camera);
+
+        System.out.println("Go");
         Log.d(TAG, "Find near restaurants location = "+currentLocation.getLatitude()+","+currentLocation.getLongitude());
         StringBuilder stringBuilder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         stringBuilder.append("location="+currentLocation.getLatitude()+","+currentLocation.getLongitude());

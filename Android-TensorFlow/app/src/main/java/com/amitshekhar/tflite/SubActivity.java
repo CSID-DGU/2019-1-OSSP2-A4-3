@@ -18,18 +18,14 @@ public class SubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
-
         Button button1 = (Button) findViewById(R.id.find_restaurant) ;
         button1.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
                 System.out.println("Find Restaurant Click");
-               // Intent intent = new Intent(SubActivity.this, MapActivity.class);
-               // startActivity(intent);
-                Intent intent = new Intent(SubActivity.this, MapActivity.class);
+                MapActivity mapActivity = new MapActivity();
+                Intent intent = new Intent(SubActivity.this,mapActivity.getClass());
                 startActivity(intent);
-               //MapActivity mapActivity = new MapActivity();
-               //mapActivity.findRestaurants(view);
             }
         });
     }

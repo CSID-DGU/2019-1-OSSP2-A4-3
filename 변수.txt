@@ -1,0 +1,6 @@
+이미지 인식 결과값 -> Classifier의 toString 참조
+
+음식점 검색 -> onPostExecute 메소드 
+
+인식 결과버튼 클릭시 결과 이미지-> activity_sub의 <imageView>
+			+ drawable 에 해당 이미지 추가
