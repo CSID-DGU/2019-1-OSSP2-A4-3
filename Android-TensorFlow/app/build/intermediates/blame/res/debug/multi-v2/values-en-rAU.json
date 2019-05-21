@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\wnddk\\Desktop\\20190515\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "outputFile": "D:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\b75960867708e54cbba1a972ef244b5a\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\624541e1f036080518f3408c86d1cb24\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\231a7258028a674b5bb611441958fa7f\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\b0a0dc2289cdca608b280fcc5127b9c1\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\6a32871ec2ddafeff3a0c5d7a378436c\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\17d503a6362e2205c0e348f51b0a6da9\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\f4b54aace8af8c7fa19701395fd4d360\\res\\values-en-rAU\\values.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\09b00204c2bfa396f3f65a06fed4c480\\res\\values-en-rAU\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

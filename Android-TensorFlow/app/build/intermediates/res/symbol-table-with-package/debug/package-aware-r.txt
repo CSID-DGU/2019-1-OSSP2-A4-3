@@ -1299,6 +1299,7 @@ id ifRoom
 id image
 id imageView
 id imageView2
+id imageView3
 id imageViewResult
 id index_entity_types
 id info
@@ -1520,6 +1521,7 @@ layout abc_tooltip
 layout activity_camera
 layout activity_main
 layout activity_map
+layout activity_recipe
 layout activity_sub
 layout cast_expanded_controller_activity
 layout cast_help_text
