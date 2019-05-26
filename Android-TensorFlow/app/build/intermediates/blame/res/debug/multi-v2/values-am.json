@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\2d8d8ebf7fdf9cb5e1dfc725e798c3ed\\res\\values-am\\values-am.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\c6a51b4cc7ce4fc9956183b664ae823d\\res\\values-am\\values-am.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,6 +52,23 @@
                         "startOffsets": "3528,3663,3802,3904",
                         "endColumns": "134,138,101,97",
                         "endOffsets": "3658,3797,3899,3997"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\81cc31d2b77266991f207413400fbdb0\\res\\values-am\\values-am.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "109",
+                        "startColumns": "4",
+                        "startOffsets": "11213",
+                        "endColumns": "100",
+                        "endOffsets": "11309"
                     }
                 },
                 {
@@ -171,23 +188,6 @@
                         "startOffsets": "8372,8471,8572,8676,8784,8880,8967,9062,9165,9258,9350,9444,9533,9637,9747,9834,9915,9995,10094,10199,10283",
                         "endColumns": "98,100,103,107,95,86,94,102,92,91,93,88,103,109,86,80,79,98,104,83,92",
                         "endOffsets": "8466,8567,8671,8779,8875,8962,9057,9160,9253,9345,9439,9528,9632,9742,9829,9910,9990,10089,10194,10278,10371"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\0369602963d3ed3a80e0f0a978071d7d\\res\\values-am\\values-am.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "109",
-                        "startColumns": "4",
-                        "startOffsets": "11213",
-                        "endColumns": "100",
-                        "endOffsets": "11309"
                     }
                 },
                 {
