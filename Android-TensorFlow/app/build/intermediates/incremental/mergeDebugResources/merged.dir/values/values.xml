@@ -148,6 +148,7 @@
     <attr format="reference" name="mediaRoutePlayDrawable"/>
     <attr format="reference" name="mediaRouteSpeakerGroupIconDrawable"/>
     <attr format="reference" name="mediaRouteSpeakerIconDrawable"/>
+    <attr format="reference" name="mediaRouteStopDrawable"/>
     <attr format="reference" name="mediaRouteTheme"/>
     <attr format="reference" name="mediaRouteTvIconDrawable"/>
     <attr format="string" name="title"/>
@@ -218,6 +219,7 @@
     <color name="material_grey_900">#ff212121</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="place_autocomplete_prediction_primary_text">#212121</color>
     <color name="place_autocomplete_prediction_primary_text_highlight">#757575</color>
     <color name="place_autocomplete_prediction_secondary_text">#757575</color>
@@ -449,7 +451,7 @@
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="cast_libraries_material_featurehighlight_pulse_base_alpha">138</integer>
     <integer name="config_tooltipAnimTime">150</integer>
-    <integer name="google_play_services_version">11400000</integer>
+    <integer name="google_play_services_version">12211000</integer>
     <integer name="mr_controller_volume_group_list_animation_duration_ms">400</integer>
     <integer name="mr_controller_volume_group_list_fade_in_duration_ms">400</integer>
     <integer name="mr_controller_volume_group_list_fade_out_duration_ms">200</integer>
@@ -505,6 +507,7 @@
     <string name="cast_mute">Mute</string>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
+    <string name="cast_notification_default_channel_name">Cast</string>
     <string name="cast_notification_disconnect">Disconnect</string>
     <string name="cast_pause">Pause</string>
     <string name="cast_play">Play</string>
@@ -530,6 +533,7 @@
     <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
     <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
     <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
     <string name="common_google_play_services_notification_ticker">Google Play services error</string>
     <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
     <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
@@ -541,11 +545,18 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="default_web_client_id" translatable="false">388728261789-486960re0g67i7s8thc3mtjp90sceonp.apps.googleusercontent.com</string>
     <string name="detect_object">Detect Object</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="firebase_database_url" translatable="false">https://fooddectection.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">388728261789</string>
     <string name="gcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="google_api_key" translatable="false">AIzaSyCeDXZZ9aNVBj-yFk7BzKl9bjnfrYNKAc8</string>
+    <string name="google_app_id" translatable="false">1:388728261789:android:3a602244ec808412</string>
     <string name="google_aps_API_key">AIzaSyDoFl2b-yoQ9gxQmp5K4ieIGXfxI-HTIRo</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCeDXZZ9aNVBj-yFk7BzKl9bjnfrYNKAc8</string>
     <string name="google_places_key">AIzaSyA3kBUdIUmEx3vtLex55v3LKYEN1hhUvDE</string>
+    <string name="google_storage_bucket" translatable="false">fooddectection.appspot.com</string>
     <string name="mr_button_content_description">Cast button</string>
     <string name="mr_cast_button_connected">Cast button. Connected</string>
     <string name="mr_cast_button_connecting">Cast button. Connecting</string>
@@ -562,18 +573,21 @@
     <string name="mr_controller_no_media_selected">No media selected</string>
     <string name="mr_controller_pause">Pause</string>
     <string name="mr_controller_play">Play</string>
-    <string name="mr_controller_stop">Stop casting</string>
+    <string name="mr_controller_stop">Stop</string>
+    <string name="mr_controller_stop_casting">Stop casting</string>
     <string name="mr_controller_volume_slider">Volume slider</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="project_id" translatable="false">fooddectection</string>
     <string name="s1">Save image</string>
     <string name="s2">"Allow Ad to store image in Picture gallery?"</string>
     <string name="s3">Accept</string>
     <string name="s4">Decline</string>
     <string name="s5">Create calendar event</string>
     <string name="s6">Allow Ad to create a calendar event?</string>
+    <string name="s7">Test Ad</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tagmanager_preview_dialog_button">Continue</string>
@@ -1953,12 +1967,17 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+    <style name="TextAppearance.Compat.Notification.Info.Media"/>
     <style name="TextAppearance.Compat.Notification.Line2" parent="TextAppearance.Compat.Notification.Info"/>
+    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="TextAppearance.Compat.Notification.Info.Media"/>
+    <style name="TextAppearance.Compat.Notification.Media"/>
     <style name="TextAppearance.Compat.Notification.Time">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+    <style name="TextAppearance.Compat.Notification.Time.Media"/>
     <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
+    <style name="TextAppearance.Compat.Notification.Title.Media"/>
     <style name="TextAppearance.MediaRouter.PrimaryText" parent="TextAppearance.AppCompat.Subhead"/>
     <style name="TextAppearance.MediaRouter.SecondaryText" parent="TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.MediaRouter.Title" parent="TextAppearance.AppCompat.Title"/>
@@ -2019,6 +2038,7 @@
         <item name="mediaRouteCloseDrawable">@drawable/mr_dialog_close_dark</item>
         <item name="mediaRoutePlayDrawable">@drawable/mr_media_play_dark</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_media_pause_dark</item>
+        <item name="mediaRouteStopDrawable">@drawable/mr_media_stop_dark</item>
         <item name="mediaRouteAudioTrackDrawable">@drawable/mr_vol_type_audiotrack_dark</item>
         <item name="mediaRouteDefaultIconDrawable">@drawable/ic_mr_button_disconnected_dark</item>
         <item name="mediaRouteTvIconDrawable">@drawable/ic_vol_type_tv_dark</item>
@@ -2034,6 +2054,7 @@
         <item name="mediaRouteCloseDrawable">@drawable/mr_dialog_close_light</item>
         <item name="mediaRoutePlayDrawable">@drawable/mr_media_play_light</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_media_pause_light</item>
+        <item name="mediaRouteStopDrawable">@drawable/mr_media_stop_light</item>
         <item name="mediaRouteAudioTrackDrawable">@drawable/mr_vol_type_audiotrack_light</item>
         <item name="mediaRouteDefaultIconDrawable">@drawable/ic_mr_button_grey</item>
         <item name="mediaRouteTvIconDrawable">@drawable/ic_vol_type_tv_light</item>
@@ -2058,12 +2079,14 @@
     <style name="ThemeOverlay.MediaRouter.Dark" parent="ThemeOverlay.AppCompat.Dark">
         <item name="mediaRoutePlayDrawable">@drawable/mr_media_play_dark</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_media_pause_dark</item>
+        <item name="mediaRouteStopDrawable">@drawable/mr_media_stop_dark</item>
         <item name="mediaRouteAudioTrackDrawable">@drawable/mr_vol_type_audiotrack_dark</item>
 
     </style>
     <style name="ThemeOverlay.MediaRouter.Light" parent="ThemeOverlay.AppCompat.Light">
         <item name="mediaRoutePlayDrawable">@drawable/mr_media_play_light</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_media_pause_light</item>
+        <item name="mediaRouteStopDrawable">@drawable/mr_media_stop_light</item>
         <item name="mediaRouteAudioTrackDrawable">@drawable/mr_vol_type_audiotrack_light</item>
     </style>
     <style name="WalletFragmentDefaultButtonTextAppearance">
@@ -2500,6 +2523,12 @@
 <enum name="dark" value="2"/>
 
 </attr>
+<attr name="customThemeStyle">
+<enum name="material" value="1"/>
+
+<enum name="googleMaterial2" value="2"/>
+
+</attr>
 </declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="arrowHeadLength"/><attr format="dimension" name="arrowShaftLength"/><attr format="dimension" name="barLength"/><attr format="dimension" name="thickness"/></declare-styleable>
     <declare-styleable name="FeatureParam">
@@ -2659,7 +2688,7 @@
 
 <attr format="float" name="latLngBoundsNorthEastLongitude"/>
 </declare-styleable>
-    <declare-styleable name="MediaRouteButton"><attr format="reference" name="externalRouteEnabledDrawable"/><attr name="buttonTint"/><attr name="android:minWidth"/><attr name="android:minHeight"/></declare-styleable>
+    <declare-styleable name="MediaRouteButton"><attr format="reference" name="externalRouteEnabledDrawable"/><attr format="color" name="mediaRouteButtonTint"/><attr name="android:minWidth"/><attr name="android:minHeight"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="alphabeticModifiers">
             <flag name="META" value="0x10000"/>

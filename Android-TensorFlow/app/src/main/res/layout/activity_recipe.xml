@@ -29,7 +29,6 @@
 
     <TextView
         android:id="@+id/textView2"
-        posi
         android:layout_width="171dp"
         android:layout_height="88dp"
         android:text="TextView"

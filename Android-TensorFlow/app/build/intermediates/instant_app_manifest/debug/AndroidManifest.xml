@@ -27,7 +27,7 @@
     <uses-feature
         android:name="android.hardware.microphone"
         android:required="false" /> <!-- Optional permission for Analytics to run. -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Permissions required for GCM -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create GCM registration tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <uses-feature
@@ -70,7 +70,11 @@
         <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" />
 
         <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" />
-        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
@@ -109,7 +113,7 @@
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!--
-Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
             Google Sign-In, this service will never be started.
         -->
         <service
@@ -118,11 +122,18 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
 
         <activity
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!--
- FirebaseMessagingService performs security checks at runtime,
+             FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
         -->
         <service
@@ -187,14 +198,7 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             </intent-filter>
         </receiver>
         <!--
- Internal (not exported) receiver used by the app to start its own exported services
-             without risk of being spoofed.
-        -->
-        <receiver
-            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
-            android:exported="false" />
-        <!--
- FirebaseInstanceIdService performs security checks at runtime,
+             FirebaseInstanceIdService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
         -->
         <service

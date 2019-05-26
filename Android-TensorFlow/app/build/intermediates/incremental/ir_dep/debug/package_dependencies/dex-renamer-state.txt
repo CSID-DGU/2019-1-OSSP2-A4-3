@@ -1,0 +1,7 @@
+#Sun May 26 16:53:35 KST 2019
+base.0=D\:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=D\:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10

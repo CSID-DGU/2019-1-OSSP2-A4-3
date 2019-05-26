@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "388728261789",
+    "firebase_url": "https://fooddectection.firebaseio.com",
+    "project_id": "fooddectection",
+    "storage_bucket": "fooddectection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388728261789:android:3a602244ec808412",
+        "android_client_info": {
+          "package_name": "com.amitshekhar.tflite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388728261789-486960re0g67i7s8thc3mtjp90sceonp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeDXZZ9aNVBj-yFk7BzKl9bjnfrYNKAc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388728261789-486960re0g67i7s8thc3mtjp90sceonp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
