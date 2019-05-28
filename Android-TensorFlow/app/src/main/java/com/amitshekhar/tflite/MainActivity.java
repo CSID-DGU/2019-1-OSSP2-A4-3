@@ -10,6 +10,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -30,7 +31,9 @@ import android.widget.ViewFlipper;
 
 import com.amitshekhar.tflite.Interface.CountryAdapter;
 import com.amitshekhar.tflite.Interface.CountryAdapter;
+import com.amitshekhar.tflite.Interface.SpecialFoodAdapter;
 import com.amitshekhar.tflite.Model.FoodOfCountry;
+import com.amitshekhar.tflite.Model.SpecialFood;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.firebase.database.ChildEventListener;
@@ -58,7 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     ArrayList<FoodOfCountry> listCountry;
-    CountryAdapter foodSpeciesAdapter;
+    CountryAdapter countryAdapter;
+
+    ArrayList<SpecialFood> listSpecialFood;
+    SpecialFoodAdapter specialFoodAdapter;
 
     private static final String TAG = "MainActivity";
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             ActionBar();
             ActionViewFlipper();
             GetDataCountries();
+            GetDataSpecialFood();
         }else
         {
             CheckConnectionInt.ShowToast(getApplicationContext(),"Check Internet connection please");
@@ -131,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     FoodOfCountry foodOfCountry = country.getValue(FoodOfCountry.class);
                     listCountry.add(foodOfCountry);
-                    foodSpeciesAdapter.notifyDataSetChanged();
+                    countryAdapter.notifyDataSetChanged();
                 }
                 listCountry.add(4,new FoodOfCountry("Detection","http://www.iconarchive.com/download/i99778/designbolts/free-multimedia/Dslr-Camera.ico"));
                 listCountry.add(5,new FoodOfCountry("Contact","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3pbMGP9FJgbUnadSQunt7_7l6HmZ0VvkGylCLJlHgwtDxqHxG"));
@@ -143,6 +150,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private void GetDataSpecialFood()
+    {
+        mData = FirebaseDatabase.getInstance().getReference();
+        mData.child("SpecialFood").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.d(TAG, "ChildEventListener");
+                for(DataSnapshot specialfoodData : dataSnapshot.getChildren()) {
+                    SpecialFood specialFood = specialfoodData.getValue(SpecialFood.class);
+                    listSpecialFood.add(specialFood);
+                    specialFoodAdapter.notifyDataSetChanged();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
     private void ActionBar()
     {
@@ -167,8 +193,14 @@ public class MainActivity extends AppCompatActivity {
 
         listCountry = new ArrayList<>();
         listCountry.add(0,new FoodOfCountry("Main","http://chittagongit.com/download/153163"));
-        foodSpeciesAdapter = new CountryAdapter(listCountry,getApplicationContext());
-        listViewMain.setAdapter(foodSpeciesAdapter);
+        countryAdapter = new CountryAdapter(listCountry,getApplicationContext());
+        listViewMain.setAdapter(countryAdapter);
+
+        listSpecialFood = new ArrayList<>();
+        specialFoodAdapter = new SpecialFoodAdapter(listSpecialFood,getApplicationContext());
+        recyclerViewMain.setHasFixedSize(true);
+        recyclerViewMain.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+        recyclerViewMain.setAdapter(specialFoodAdapter);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

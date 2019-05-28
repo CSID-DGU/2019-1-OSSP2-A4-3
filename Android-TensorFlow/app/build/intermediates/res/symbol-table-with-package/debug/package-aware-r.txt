@@ -1305,6 +1305,7 @@ drawable mr_media_stop_light
 drawable mr_vol_type_audiotrack_dark
 drawable mr_vol_type_audiotrack_light
 drawable navigation_empty_icon
+drawable newimage
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1540,6 +1541,7 @@ id imageView5
 id imageView8
 id imageViewCountry
 id imageViewResult
+id imgspecialFood
 id index_entity_types
 id info
 id instant_message
@@ -1685,6 +1687,9 @@ id snackbar_action
 id snackbar_text
 id snap
 id spacer
+id specialFood_country
+id specialFood_name
+id specialView
 id speed
 id split_action_bar
 id spread
@@ -1832,6 +1837,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout layout_focus_marker
 layout listview_country
+layout listview_specialfood
 layout mr_chooser_dialog
 layout mr_chooser_list_item
 layout mr_controller_material_dialog_b
