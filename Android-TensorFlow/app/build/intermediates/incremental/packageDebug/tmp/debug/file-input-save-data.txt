@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue May 28 11:33:26 KST 2019
+#Wed May 29 18:33:52 KST 2019
 5.base=D\:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
 42.base=D\:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
 22.path=lib/arm64-v8a/libtensorflowlite_jni.so

@@ -1510,6 +1510,10 @@ id find_recipe
 id find_restaurant
 id fixed
 id focusMarkerContainer
+id foodCountry
+id foodDescrip
+id foodImage
+id foodName
 id forever
 id front
 id ghost_view
@@ -1560,7 +1564,10 @@ id left
 id light
 id line1
 id line3
+id listJapanFood
+id listKoreaFood
 id listMode
+id listVietnamFood
 id list_item
 id listviewMain
 id live_stream_indicator
@@ -1716,6 +1723,9 @@ id tag_transition_group
 id take_picture
 id tap
 id tapWithMarker
+id tbjapanFood
+id tbkoreaFood
+id tbvietnamFood
 id terrain
 id test
 id text
@@ -1809,12 +1819,17 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_camera
+layout activity_contact
 layout activity_info
+layout activity_info2
+layout activity_japan
+layout activity_korea
 layout activity_main
 layout activity_main2
 layout activity_map
 layout activity_recipe
 layout activity_sub
+layout activity_viet_nam
 layout cast_expanded_controller_activity
 layout cast_help_text
 layout cast_intro_overlay
@@ -1837,6 +1852,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout layout_focus_marker
 layout listview_country
+layout listview_food
 layout listview_specialfood
 layout mr_chooser_dialog
 layout mr_chooser_list_item

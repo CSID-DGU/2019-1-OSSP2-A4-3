@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -32,10 +33,12 @@ import android.widget.ViewFlipper;
 import com.amitshekhar.tflite.Interface.CountryAdapter;
 import com.amitshekhar.tflite.Interface.CountryAdapter;
 import com.amitshekhar.tflite.Interface.SpecialFoodAdapter;
+import com.amitshekhar.tflite.Model.Food;
 import com.amitshekhar.tflite.Model.FoodOfCountry;
 import com.amitshekhar.tflite.Model.SpecialFood;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.location.DetectedActivity;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
             ActionViewFlipper();
             GetDataCountries();
             GetDataSpecialFood();
+            ClickCountries();
         }else
         {
             CheckConnectionInt.ShowToast(getApplicationContext(),"Check Internet connection please");
@@ -106,6 +110,99 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
     }
+    ArrayList<Food> listFood;
+    private void ClickCountries() {
+        listViewMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i)
+                {
+                    //Main
+                    case 0:
+                        if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
+                        {
+                            Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                            startActivity(intent);
+                        }else
+                        {
+                            CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 1: //Vietnam
+                        if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
+                        {
+                            Intent intent = new Intent(MainActivity.this,VietNamActivity.class);
+                            intent.putExtra("idCountries",2);
+                            startActivity(intent);
+                        }else
+                        {
+                            CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 2: //Japan
+                        if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
+                        {
+                            Intent intent = new Intent(MainActivity.this,JapanActivity.class);
+                            intent.putExtra("idCountries",3);
+                            startActivity(intent);
+                        }else
+                        {
+                            CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 3: //Korea
+                        if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
+                        {
+                            Intent intent = new Intent(MainActivity.this,KoreaActivity.class);
+                            intent.putExtra("idCountries",1);
+                            startActivity(intent);
+                        }else
+                        {
+                            CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 4: //Detection
+                        if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
+                        {
+                            Intent intent = new Intent(MainActivity.this, SubActivity.class);
+                            startActivity(intent);
+                        }else
+                        {
+                            CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 5: //Contact
+                        if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
+                        {
+                            Intent intent = new Intent(MainActivity.this,ContactActivity.class);
+                            startActivity(intent);
+                        }else
+                        {
+                            CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 6: //Info
+                        if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
+                        {
+                            Intent intent = new Intent(MainActivity.this,InfoActivity.class);
+                            startActivity(intent);
+                        }else
+                        {
+                            CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                }
+            }
+        });
+    }
+
     private void ActionViewFlipper(){
         ArrayList<String> advertiseList = new ArrayList<>();
         advertiseList.add("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2012/10/Food.jpg");
@@ -190,6 +287,8 @@ public class MainActivity extends AppCompatActivity {
         navigationView = (NavigationView) findViewById(R.id.navigationMain);
         listViewMain = (ListView) findViewById(R.id.listviewMain);
         drawerLayout =(DrawerLayout) findViewById(R.id.drawerlayout);
+
+        listFood = new ArrayList<>();
 
         listCountry = new ArrayList<>();
         listCountry.add(0,new FoodOfCountry("Main","http://chittagongit.com/download/153163"));

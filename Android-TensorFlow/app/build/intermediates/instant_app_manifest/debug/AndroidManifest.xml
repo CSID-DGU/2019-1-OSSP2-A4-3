@@ -50,6 +50,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.amitshekhar.tflite.InfoActivity" />
+        <activity android:name="com.amitshekhar.tflite.ContactActivity" />
+        <activity android:name="com.amitshekhar.tflite.JapanActivity" />
+        <activity android:name="com.amitshekhar.tflite.VietNamActivity" />
+        <activity android:name="com.amitshekhar.tflite.KoreaActivity" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCapA8W9u8hPsO1tKb0yX04L41nYUBVa30" />
@@ -66,8 +72,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.amitshekhar.tflite.CameraActivity" >
-        </activity>
+        <activity android:name="com.amitshekhar.tflite.CameraActivity" />
 
         <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" />
 
