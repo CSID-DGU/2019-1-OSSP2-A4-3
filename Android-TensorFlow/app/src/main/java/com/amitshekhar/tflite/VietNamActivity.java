@@ -1,9 +1,11 @@
 package com.amitshekhar.tflite;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 
@@ -23,27 +25,30 @@ public class VietNamActivity extends AppCompatActivity {
     ListView listView;
     VietNamFoodAdapter vietNamFoodAdapter;
     ArrayList<Food> vietNamFoodList;
-    int iDcoutry_food;
+    String foodCountry = "";
     int page;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viet_nam);
         Init();
-        GetIdFood();
+        GetFoodCountry();
         ActionToolBar();
-        GetDataFood();
+        GetDataFood(page);
+        ClickFood();
     }
     DatabaseReference vData;
-    private void GetDataFood() {
+    private void GetDataFood(int page) {
         vData = FirebaseDatabase.getInstance().getReference();
         vData.child("Food").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                int i  =  0;
                 for(DataSnapshot vietnamFood : dataSnapshot.getChildren())
                 {
                     Food foodVietnamValue = vietnamFood.getValue(Food.class);
-                    if(foodVietnamValue.getCountryID().equals(String.valueOf(iDcoutry_food))) {
+                    Log.d(TAG,"Country = "+ (i++) +  foodCountry + "Class Country = " + foodVietnamValue.getCountry());
+                    if(foodVietnamValue.getCountry().equals(foodCountry)) {
                         vietNamFoodList.add(foodVietnamValue);
                         vietNamFoodAdapter.notifyDataSetChanged();
                     }
@@ -51,6 +56,16 @@ public class VietNamActivity extends AppCompatActivity {
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+    private void ClickFood(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(VietNamActivity.this,InfoFood.class);
+                intent.putExtra("foodInfo", vietNamFoodList.get(i));
+                startActivity(intent);
             }
         });
     }
@@ -64,8 +79,10 @@ public class VietNamActivity extends AppCompatActivity {
             }
         });
     }
-    private void GetIdFood() {
-        iDcoutry_food = getIntent().getIntExtra("idCountries",-1);
+    private static final String TAG = "VietnamActivity";
+    private void GetFoodCountry() {
+        Bundle extras = getIntent().getExtras();
+        foodCountry= extras.getString("Country");
     }
     private void Init() {
         toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.tbvietnamFood);

@@ -1,9 +1,11 @@
 package com.amitshekhar.tflite;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toolbar;
 
@@ -24,18 +26,30 @@ public class KoreaActivity extends AppCompatActivity {
     ListView listView;
     KoreaFoodAdapter koreaFoodAdapter;
     ArrayList<Food> koreaFoodList;
-    int iDcoutry_food;
+    String foodCountry = "";
+    int page = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_korea);
         Init();
-        GetIdFood();
+        GetFoodCountry();
         ActionToolBar();
-        GetDataFood();
+        GetDataFood(page);
+        ClickFood();
+    }
+    private void ClickFood(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(KoreaActivity.this,InfoFood.class);
+                intent.putExtra("foodInfo", koreaFoodList.get(i));
+                startActivity(intent);
+            }
+        });
     }
     DatabaseReference mData;
-    private void GetDataFood() {
+    private void GetDataFood(int page) {
         mData = FirebaseDatabase.getInstance().getReference();
         mData.child("Food").addValueEventListener(new ValueEventListener() {
             @Override
@@ -44,7 +58,7 @@ public class KoreaActivity extends AppCompatActivity {
                 for(DataSnapshot koreaFood : dataSnapshot.getChildren())
                 {
                     Food foodOfKorea = koreaFood.getValue(Food.class);
-                    if(foodOfKorea.getCountryID().equals(String.valueOf(iDcoutry_food))) {
+                    if(foodOfKorea.getCountry().equals(foodCountry)) {
                         koreaFoodList.add(foodOfKorea);
                         koreaFoodAdapter.notifyDataSetChanged();
                     }
@@ -66,8 +80,11 @@ public class KoreaActivity extends AppCompatActivity {
             }
         });
     }
-    private void GetIdFood() {
-        iDcoutry_food = getIntent().getIntExtra("idCountries",-1);
+    private static final String TAG = "KoreaClass";
+    private void GetFoodCountry() {
+            Bundle extras = getIntent().getExtras();
+            foodCountry= extras.getString("Country");
+            Log.d(TAG, foodCountry);
     }
     private void Init() {
         toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.tbkoreaFood);

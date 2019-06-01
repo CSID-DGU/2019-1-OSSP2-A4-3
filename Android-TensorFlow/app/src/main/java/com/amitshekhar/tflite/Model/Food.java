@@ -1,28 +1,27 @@
 package com.amitshekhar.tflite.Model;
 
-public class Food {
-    private String CountryID;
+import java.io.Serializable;
+
+public class Food  implements Serializable {
+    private String Country;
     private String Description;
     private String Image;
-    private String InstructionsMakeLink;
+    private String YoutubeLink;
     private String Name;
-
     public Food() {
     }
-    public Food(String countryID, String description, String image, String instructionsMakeLink, String name, String title) {
-        CountryID = countryID;
+    public Food(String country, String description, String image, String youtubelink, String name, String title) {
+        Country = country;
         Description = description;
         Image = image;
-        InstructionsMakeLink = instructionsMakeLink;
+        YoutubeLink = youtubelink;
         Name = name;
     }
-
-    public String getCountryID() {
-        return CountryID;
+    public String getCountry() {
+        return Country;
     }
-
-    public void setCountryID(String countryID) {
-        CountryID = countryID;
+    public void setCountry(String country) {
+        Country = country;
     }
 
     public String getDescription() {
@@ -41,12 +40,12 @@ public class Food {
         Image = image;
     }
 
-    public String getInstructionsMakeLink() {
-        return InstructionsMakeLink;
+    public String getYoutubeLink() {
+        return YoutubeLink;
     }
 
-    public void setInstructionsMakeLink(String instructionsMakeLink) {
-        InstructionsMakeLink = instructionsMakeLink;
+    public void setYoutubeLink(String youtubeLink) {
+        YoutubeLink = youtubeLink;
     }
 
     public String getName() {

@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
                             Intent intent = new Intent(MainActivity.this,VietNamActivity.class);
-                            intent.putExtra("idCountries",2);
+                            intent.putExtra("Country","베트남");
                             startActivity(intent);
                         }else
                         {
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
                             Intent intent = new Intent(MainActivity.this,JapanActivity.class);
-                            intent.putExtra("idCountries",3);
+                            intent.putExtra("Country","일본");
                             startActivity(intent);
                         }else
                         {
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
                             Intent intent = new Intent(MainActivity.this,KoreaActivity.class);
-                            intent.putExtra("idCountries",1);
+                            intent.putExtra("Country","한국");
                             startActivity(intent);
                         }else
                         {
@@ -190,8 +190,8 @@ public class MainActivity extends AppCompatActivity {
                     case 6: //Info
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
-                            Intent intent = new Intent(MainActivity.this,InfoActivity.class);
-                            startActivity(intent);
+                            //Intent intent = new Intent(MainActivity.this,InfoActivity.class);
+                           // startActivity(intent);
                         }else
                         {
                             CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
@@ -230,7 +230,6 @@ public class MainActivity extends AppCompatActivity {
         mData.child("Country").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d(TAG, "ChildEventListener");
                 for(DataSnapshot country : dataSnapshot.getChildren())
                 {
                     FoodOfCountry foodOfCountry = country.getValue(FoodOfCountry.class);

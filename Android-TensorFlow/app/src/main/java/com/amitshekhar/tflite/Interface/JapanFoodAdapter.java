@@ -80,21 +80,7 @@ public class JapanFoodAdapter  extends BaseAdapter {
         }
         Food foodJapan = (Food) getItem(i);
         viewHolder.foodName.setText(foodJapan.getName());
-        int Id_countries = Integer.parseInt(foodJapan.getCountryID());
-        String country = "";
-        switch (Id_countries)
-        {
-            case 1:
-                country =  "Korea";
-                break;
-            case 2:
-                country =  "VietNam";
-                break;
-            case 3:
-                country =  "Japan";
-                break;
-        }
-        viewHolder.foodCountry.setText(country);
+        viewHolder.foodCountry.setText(foodJapan.getCountry());
         viewHolder.foodName.setText(foodJapan.getName());
         viewHolder.foodDescrip.setMaxLines(2);
         viewHolder.foodDescrip.setEllipsize(TextUtils.TruncateAt.END);

@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".YoutubeView"></activity>
+        <activity android:name=".InfoFood" />
         <activity android:name=".ContactActivity" />
         <activity android:name=".JapanActivity" />
         <activity android:name=".VietNamActivity" />

@@ -22,19 +22,20 @@ public class JapanActivity extends AppCompatActivity {
     ListView listView;
     JapanFoodAdapter japanFoodAdapter;
     ArrayList<Food> japanFoodList;
-    int iDcoutry_food;
+    String foodCountry = "";
+    int page = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_japan);
         Init();
-        GetIdFood();
+        GetFoodCountry();
         ActionToolBar();
-        GetDataFood();
+        GetDataFood(page);
     }
     DatabaseReference mData;
     private static final String TAG = "JapanActivity";
-    private void GetDataFood() {
+    private void GetDataFood(int page) {
         mData = FirebaseDatabase.getInstance().getReference();
         mData.child("Food").addValueEventListener(new ValueEventListener() {
             @Override
@@ -43,7 +44,7 @@ public class JapanActivity extends AppCompatActivity {
                 for(DataSnapshot japanFood : dataSnapshot.getChildren())
                 {
                     Food foodOfJapan = japanFood.getValue(Food.class);
-                    if(foodOfJapan.getCountryID().equals(String.valueOf(iDcoutry_food))) {
+                    if(foodOfJapan.getCountry().equals(foodCountry)) {
                         japanFoodList.add(foodOfJapan);
                         japanFoodAdapter.notifyDataSetChanged();
                     }
@@ -64,8 +65,10 @@ public class JapanActivity extends AppCompatActivity {
             }
         });
     }
-    private void GetIdFood() {
-        iDcoutry_food = getIntent().getIntExtra("idCountries",-1);
+    private void GetFoodCountry() {
+        Bundle extras = getIntent().getExtras();
+        foodCountry= extras.getString("Country");
+        Log.d(TAG, foodCountry);
     }
     private void Init() {
         toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.tbjapanFood);

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
 MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\0931aa2de5c0b9cb5b17140e71692281\AndroidManifest.xml:2:1-27:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\cd3ca79af13bb18b2d25bfddd2318194\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8318c8cf86afd948aedfa20db728c51d\AndroidManifest.xml:2:1-6:12
@@ -129,20 +129,20 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Administrator\.gradl
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\30d08f0aa30021192a4ffd7aa9490656\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\eae2fa8f715ae45f031069363711fb58\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\39f908cc6786bd7793bc1a328f6e82e9\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
 		INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
 		INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:1-44:12
 		INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:2:11-69
@@ -205,7 +205,7 @@ MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Administrator\.gr
 	android:name
 		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:8:22-76
 application
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:11:5-41:19
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:11:5-42:19
 MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\0931aa2de5c0b9cb5b17140e71692281\AndroidManifest.xml:25:5-20
 MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\0931aa2de5c0b9cb5b17140e71692281\AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8318c8cf86afd948aedfa20db728c51d\AndroidManifest.xml:5:5-20
@@ -412,66 +412,70 @@ MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Us
 		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
 		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:17:9-40
-activity#com.amitshekhar.tflite.InfoActivity
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:18:9-59
+activity#com.amitshekhar.tflite.YoutubeView
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:18:9-58
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:18:19-47
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:18:19-46
+activity#com.amitshekhar.tflite.InfoFood
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:19:9-46
+	android:name
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:19:19-43
 activity#com.amitshekhar.tflite.ContactActivity
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:19:9-53
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:20:9-53
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:19:19-50
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:20:19-50
 activity#com.amitshekhar.tflite.JapanActivity
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:20:9-51
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:21:9-51
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:20:19-48
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:21:19-48
 activity#com.amitshekhar.tflite.VietNamActivity
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:21:9-53
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:22:9-53
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:21:19-50
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:22:19-50
 activity#com.amitshekhar.tflite.KoreaActivity
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:22:9-51
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:23:9-51
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:22:19-48
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:23:19-48
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:24:9-26:71
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:25:9-27:71
 	android:value
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:26:13-68
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:27:13-68
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:25:13-58
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:26:13-58
 meta-data#com.google.android.gms.version
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:27:9-29:69
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:28:9-30:69
 MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\249867cf209432f3b22a142a97cedaf8\AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\249867cf209432f3b22a142a97cedaf8\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:29:13-66
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:30:13-66
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:28:13-58
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:29:13-58
 activity#com.amitshekhar.tflite.MapActivity
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:31:9-49
-	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:31:19-46
-activity#com.amitshekhar.tflite.SubActivity
 ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:32:9-49
 	android:name
 		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:32:19-46
+activity#com.amitshekhar.tflite.SubActivity
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:33:9-49
+	android:name
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:33:19-46
 activity#com.amitshekhar.tflite.MainActivity
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:33:9-39:20
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:34:9-40:20
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:33:19-47
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:34:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:34:13-38:29
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:36:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:37:17-77
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:38:17-77
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:38:27-74
 activity#com.amitshekhar.tflite.CameraActivity
-ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:40:9-52
+ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:41:9-52
 	android:name
-		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:40:19-49
+		ADDED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml:41:19-49
 uses-sdk
 INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\src\main\AndroidManifest.xml

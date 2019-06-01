@@ -50,7 +50,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.amitshekhar.tflite.InfoActivity" />
+        <activity android:name="com.amitshekhar.tflite.YoutubeView" />
+        <activity android:name="com.amitshekhar.tflite.InfoFood" />
         <activity android:name="com.amitshekhar.tflite.ContactActivity" />
         <activity android:name="com.amitshekhar.tflite.JapanActivity" />
         <activity android:name="com.amitshekhar.tflite.VietNamActivity" />

@@ -78,29 +78,14 @@ public class VietNamFoodAdapter  extends BaseAdapter {
         {
             viewHolder = (ViewHolderVN) view.getTag();
         }
-        Food foodKorea = (Food) getItem(i);
-        viewHolder.foodName.setText(foodKorea.getName());
-        int Id_countries = Integer.parseInt(foodKorea.getCountryID());
-        String country = "";
-        switch (Id_countries)
-        {
-            case 1:
-                country =  "Korea";
-                break;
-            case 2:
-                country =  "VietNam";
-                break;
-            case 3:
-                country =  "Japan";
-                break;
-
-        }
-        viewHolder.foodCountry.setText(country);
-        viewHolder.foodName.setText(foodKorea.getName());
+        Food foodVietNam = (Food) getItem(i);
+        viewHolder.foodName.setText(foodVietNam.getName());
+        viewHolder.foodCountry.setText(foodVietNam.getCountry());
+        viewHolder.foodName.setText(foodVietNam.getName());
         viewHolder.foodDescrip.setMaxLines(2);
         viewHolder.foodDescrip.setEllipsize(TextUtils.TruncateAt.END);
-        viewHolder.foodDescrip.setText(foodKorea.getDescription());
-        Picasso.with(context).load(foodKorea.getImage()).into(viewHolder.foodImage);
+        viewHolder.foodDescrip.setText(foodVietNam.getDescription());
+        Picasso.with(context).load(foodVietNam.getImage()).into(viewHolder.foodImage);
         return view;
     }
 }
