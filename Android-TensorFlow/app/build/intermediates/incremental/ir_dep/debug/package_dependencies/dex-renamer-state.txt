@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 #Sun Jun 02 00:37:09 KST 2019
 base.0=D\:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+=======
+#Thu May 30 22:53:56 KST 2019
+base.0=C\:\\Users\\bohee\\Desktop\\programming\\Andspace\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+>>>>>>> 80c2110a32ed11a54d13182569a3f6749e90f1de
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+base.1=C\:\\Users\\bohee\\Desktop\\programming\\Andspace\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
