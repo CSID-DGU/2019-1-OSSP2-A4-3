@@ -35,7 +35,6 @@ import com.amitshekhar.tflite.Interface.CountryAdapter;
 import com.amitshekhar.tflite.Interface.SpecialFoodAdapter;
 import com.amitshekhar.tflite.Model.Food;
 import com.amitshekhar.tflite.Model.FoodOfCountry;
-import com.amitshekhar.tflite.Model.SpecialFood;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.location.DetectedActivity;
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<FoodOfCountry> listCountry;
     CountryAdapter countryAdapter;
 
-    ArrayList<SpecialFood> listSpecialFood;
+    ArrayList<Food> listSpecialFood;
     SpecialFoodAdapter specialFoodAdapter;
 
     private static final String TAG = "MainActivity";
@@ -110,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
     }
-    ArrayList<Food> listFood;
     private void ClickCountries() {
         listViewMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -168,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                     case 4: //Detection
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
-                            Intent intent = new Intent(MainActivity.this, SubActivity.class);
+                            Intent intent = new Intent(MainActivity.this,CameraActivity.class);
                             startActivity(intent);
                         }else
                         {
@@ -179,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                     case 5: //Contact
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
-                            Intent intent = new Intent(MainActivity.this,ContactActivity.class);
+                            Intent intent = new Intent(MainActivity.this,InfomationActivity.class);
                             startActivity(intent);
                         }else
                         {
@@ -187,11 +185,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-                    case 6: //Info
+                    case 6: //Sign Out
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
-                            //Intent intent = new Intent(MainActivity.this,InfoActivity.class);
-                           // startActivity(intent);
+                            Intent intent = new Intent(MainActivity.this,LoginActivy.class);
+                            startActivity(intent);
                         }else
                         {
                             CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
@@ -225,27 +223,27 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference mData;
     private void GetDataCountries()
     {
-        Log.d(TAG, "GetDataCountries Go");
+        Log.d(TAG, "GetDataCountries Go 1");
         mData = FirebaseDatabase.getInstance().getReference();
         mData.child("Country").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot country : dataSnapshot.getChildren())
                 {
+                    Log.d(TAG, "GetDataCountries Go 2");
                     FoodOfCountry foodOfCountry = country.getValue(FoodOfCountry.class);
                     listCountry.add(foodOfCountry);
                     countryAdapter.notifyDataSetChanged();
                 }
                 listCountry.add(4,new FoodOfCountry("Detection","http://www.iconarchive.com/download/i99778/designbolts/free-multimedia/Dslr-Camera.ico"));
                 listCountry.add(5,new FoodOfCountry("Contact","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3pbMGP9FJgbUnadSQunt7_7l6HmZ0VvkGylCLJlHgwtDxqHxG"));
-                listCountry.add(6,new FoodOfCountry("Information","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGJxCs8wi1t7soPzjYVEs7-HMcf79G5-0l2Kisywh8Mzr-eNfY"));
+                listCountry.add(6,new FoodOfCountry("Loading","https://images.assetsdelivery.com/compings_v2/feelisgood/feelisgood1709/feelisgood170901740.jpg"));
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                Log.d(TAG, databaseError.toString());
             }
         });
-
     }
     private void GetDataSpecialFood()
     {
@@ -255,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.d(TAG, "ChildEventListener");
                 for(DataSnapshot specialfoodData : dataSnapshot.getChildren()) {
-                    SpecialFood specialFood = specialfoodData.getValue(SpecialFood.class);
+                    Food specialFood = specialfoodData.getValue(Food.class);
                     listSpecialFood.add(specialFood);
                     specialFoodAdapter.notifyDataSetChanged();
                 }
@@ -287,7 +285,6 @@ public class MainActivity extends AppCompatActivity {
         listViewMain = (ListView) findViewById(R.id.listviewMain);
         drawerLayout =(DrawerLayout) findViewById(R.id.drawerlayout);
 
-        listFood = new ArrayList<>();
 
         listCountry = new ArrayList<>();
         listCountry.add(0,new FoodOfCountry("Main","http://chittagongit.com/download/153163"));
@@ -299,6 +296,16 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewMain.setHasFixedSize(true);
         recyclerViewMain.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerViewMain.setAdapter(specialFoodAdapter);
+
+        specialFoodAdapter.setOnItemClickListener(new SpecialFoodAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int postion) {
+                final Food food = listSpecialFood.get(postion);
+                Intent intent = new Intent(MainActivity.this,InfoFood.class);
+                intent.putExtra("foodInfo", food);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -325,4 +332,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-

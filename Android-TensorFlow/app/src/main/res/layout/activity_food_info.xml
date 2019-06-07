@@ -1,60 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<android.support.v7.widget.Toolbar
-    android:id="@+id/foodinfo"
-    android:background="#FF9800"
-    app:titleTextColor="#fff"
-    app:title="Food Information"
-    android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize">
-</android.support.v7.widget.Toolbar>
-    <LinearLayout
-        android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/foodinfo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF9800"
+        app:title="Food Information"
+        app:titleTextColor="#fff"></android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <ImageView
             android:id="@+id/infoFoodImage"
-            android:src="@mipmap/ic_launcher"
-            android:layout_margin="10dp"
             android:layout_width="150dp"
-            android:layout_height="150dp" />
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher" />
         <LinearLayout
-            android:gravity="center"
             android:id="@+id/infoFood"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/infoFoodName"
-                android:textSize="30sp"
-                android:textColor="#C91212"
-                android:text="FoodName"
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="FoodName"
+                android:textColor="#C91212"
+                android:textSize="30sp" />
+
             <TextView
                 android:id="@+id/infoFoodCountry"
-                android:textSize="20sp"
-                android:text="Country"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:textSize="20sp" />
+
             <Button
-                android:gravity="center"
                 android:id="@+id/infoFoodSave"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
-                android:text="Image Save" />
-            <Button
                 android:gravity="center"
+                android:text="Image Save" />
+
+            <Button
                 android:id="@+id/infoFoodSearch"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
+                android:gravity="center"
                 android:text="Search Map" />
         </LinearLayout>
     </LinearLayout>
@@ -62,34 +66,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
-            android:textColor="#3F51B5"
-            android:textSize="20sp"
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1,Description Food" />
+            android:text="1,Description Food"
+            android:textColor="#3F51B5"
+            android:textSize="20sp" />
+
         <TextView
             android:id="@+id/infoFoodDescription"
-            android:text="Description food"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Description food" />
+
         <TextView
-            android:textColor="#3F51B5"
-            android:textSize="20sp"
             android:id="@+id/editText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2,Instructions Make" />
+            android:text="2,Instructions Make"
+            android:textColor="#3F51B5"
+            android:textSize="20sp" />
+
         <TextView
             android:id="@+id/infoFoodMake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Youtube에서 참고하시고 만들어보세요 !!!"
+            android:text="Youtube에서 참고하시고 만들어보세요 !!!" />
+        <Button
+            android:id="@+id/youtubeButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <View
-            android:id="@+id/infoFoodView"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Youtube Play" />
+
     </LinearLayout>
 </LinearLayout>

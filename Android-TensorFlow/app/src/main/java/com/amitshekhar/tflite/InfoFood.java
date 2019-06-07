@@ -1,8 +1,11 @@
 package com.amitshekhar.tflite;
 
+import android.content.Intent;
+import android.icu.text.IDNA;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toolbar;
@@ -18,6 +21,9 @@ public class InfoFood extends AppCompatActivity {
     TextView txtfoodCountry;
     TextView txtDescription;
     TextView txtMake;
+    Button button;
+    Button btSearch;
+    Button btSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,20 +32,41 @@ public class InfoFood extends AppCompatActivity {
         ActionToolbar();
         GetInformation();
     }
+
+
     private void GetInformation() {
         Food food = (Food) getIntent().getSerializableExtra("foodInfo");
-        String foodName = food.getName();
+        final String foodName = food.getName();
         String foodCountry = food.getCountry();
         String foodDescription = food.getDescription();
-        String foodMake = food.getYoutubeLink();
+        final String foodMake = food.getYoutubeLink();
         String foodImage = food.getImage();
 
         txtfoodName.setText(foodName);
         txtfoodCountry.setText(foodCountry);
         txtDescription.setText(foodDescription);
         Picasso.with(getApplicationContext()).load(foodImage).into(imageView);
+        btSave = (Button) findViewById(R.id.infoFoodSave);
+        button=(Button)findViewById(R.id.youtubeButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InfoFood.this,YoutubeView.class);
+                intent.putExtra("YoutubeLink", foodMake);
+                startActivity(intent);
+            }
+        });
+        btSearch = (Button) findViewById(R.id.infoFoodSearch);
+        btSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MapActivity mapActivity = new MapActivity();
+                Intent intent = new Intent(InfoFood.this,mapActivity.getClass());
+                intent.putExtra("SearchKey",foodName);
+                startActivity(intent);
+            }
+        });
     }
-
     private void ActionToolbar() {
         setSupportActionBar(toolbarFood);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

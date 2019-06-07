@@ -38,8 +38,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onMapReady: map is ready");
         mMap = googleMap;
+        toolbar = findViewById(R.id.toolbarMap);
         if (mLocationPermissionsGranted) {
             getDeviceLocation();
+            ActionToolBar();
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
                     Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -49,6 +51,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             mMap.getUiSettings().setMyLocationButtonEnabled(true);
         }
     }
+    android.support.v7.widget.Toolbar toolbar;
     private static final String TAG = "MapActivity";
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
@@ -148,13 +151,27 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             }
         }
     }
+    private void ActionToolBar() {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+    private String GetFoodCountry() {
+        Bundle extras = getIntent().getExtras();
+        return extras.getString("SearchKey", "Error");
+
+    }
     //////////////////Show Current Location  - End //////////////////
     public void findRestaurants()
     {
-        //Intent intent_camera = new Intent(MapActivity.this, MapActivity.class);
-        //startActivity(intent_camera);
-
-        System.out.println("Go");
+        Intent intent_camera = new Intent(MapActivity.this, MapActivity.class);
+        startActivity(intent_camera);
+        String searchKey  = GetFoodCountry();
         Log.d(TAG, "Find near restaurants location = "+currentLocation.getLatitude()+","+currentLocation.getLongitude());
         StringBuilder stringBuilder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         stringBuilder.append("location="+currentLocation.getLatitude()+","+currentLocation.getLongitude());

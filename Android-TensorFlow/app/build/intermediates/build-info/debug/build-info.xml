@@ -1,267 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-<<<<<<< HEAD
     api-level="26"
-    build-mode="FULL"
-    density="420dpi"
-    format="10"
-    ir-eligibility="CLASS_ADDED"
-    plugin-version="3.4.1"
-    timestamp="1559403391549"
-=======
-    api-level="29"
-    build-mode="FULL"
+    build-mode="COLD"
     density="420dpi"
     format="10"
     plugin-version="3.4.1"
-    timestamp="1559224348634"
->>>>>>> 80c2110a32ed11a54d13182569a3f6749e90f1de
+    timestamp="1559872490589"
     token="5070483594407441613"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-<<<<<<< HEAD
-        duration="3098" />
-=======
-        duration="5450" />
->>>>>>> 80c2110a32ed11a54d13182569a3f6749e90f1de
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-<<<<<<< HEAD
-        duration="241" />
+        duration="0" />
     <task
         name="verifier"
-        duration="111" />
-
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
+        duration="0" />
 
     <build
         build-mode="FULL"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1559403391549"
-        verifier="COLD_SWAP_REQUESTED" >
-=======
-        duration="1514" />
-    <task
-        name="verifier"
-        duration="3110" />
-
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-
-    <build
-        build-mode="FULL"
-        timestamp="1559224348634"
+        timestamp="1559872065739"
         verifier="FULL_BUILD_REQUESTED" >
->>>>>>> 80c2110a32ed11a54d13182569a3f6749e90f1de
         <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-<<<<<<< HEAD
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-=======
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
->>>>>>> 80c2110a32ed11a54d13182569a3f6749e90f1de
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-<<<<<<< HEAD
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-=======
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bohee\Desktop\programming\Andspace\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
->>>>>>> 80c2110a32ed11a54d13182569a3f6749e90f1de
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-<<<<<<< HEAD
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-=======
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
->>>>>>> 80c2110a32ed11a54d13182569a3f6749e90f1de
-            type="SPLIT" />
-        <artifact
             location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-<<<<<<< HEAD
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-=======
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
->>>>>>> 80c2110a32ed11a54d13182569a3f6749e90f1de
+        <artifact
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
+    <build
+        build-mode="COLD"
+        timestamp="1559872490589"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

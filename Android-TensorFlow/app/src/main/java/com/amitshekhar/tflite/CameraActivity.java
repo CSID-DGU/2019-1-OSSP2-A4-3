@@ -31,9 +31,7 @@ public class CameraActivity  extends AppCompatActivity {
     private static final int INPUT_SIZE = 299;
 
     private Classifier classifier;
-
     private Executor executor = Executors.newSingleThreadExecutor();
-    private TextView textViewResult;
     private Button btnDetectObject, btnToggleCamera, btnSelectAlbum;
     private Button resultButton1,resultButton2,resultButton3;
     private ImageView imageViewResult;
@@ -42,27 +40,25 @@ public class CameraActivity  extends AppCompatActivity {
     private Bitmap img;
     private boolean isFromAlbum = false;
 
+    android.support.v7.widget.Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         cameraView = findViewById(R.id.cameraView);
         imageViewResult = findViewById(R.id.imageViewResult);
-        textViewResult = findViewById(R.id.textViewResult);
-        textViewResult.setMovementMethod(new ScrollingMovementMethod());
 
-        final Intent result_button_click = new Intent(this, SubActivity.class);
+
+        final Intent result_button_click = new Intent(this, CameraActivity.class);
         btnToggleCamera = findViewById(R.id.btnToggleCamera);
         btnDetectObject = findViewById(R.id.btnDetectObject);
         btnSelectAlbum = findViewById(R.id.btnSelectAlbum);
         resultButton1 = findViewById(R.id.result1);
         resultButton2 = findViewById(R.id.result2);
         resultButton3 = findViewById(R.id.result3);
-
-
-
-
-
+        toolbar = findViewById(R.id.toolbarDetection);
+        ActionToolBar();
         cameraView.addCameraKitListener(new CameraKitEventListener() {
             @Override
             public void onEvent(CameraKitEvent cameraKitEvent) {
@@ -102,7 +98,6 @@ public class CameraActivity  extends AppCompatActivity {
                 resultButton2.setText(words[5]+ " " + words[6]);
                 resultButton3.setText(words[9]+ " " + words[10]);
 
-                //textViewResult.setText(results.toString());
 
                 resultButton1.setVisibility(View.VISIBLE);
                 resultButton2.setVisibility(View.VISIBLE);
@@ -153,7 +148,6 @@ public class CameraActivity  extends AppCompatActivity {
                 cameraView.toggleFacing();
             }
         });
-
         btnDetectObject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,7 +157,16 @@ public class CameraActivity  extends AppCompatActivity {
 
         initTensorFlowAndLoadModel();
     }
-
+    private void ActionToolBar() {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // Check which request we're responding to
         if (requestCode == 1) {

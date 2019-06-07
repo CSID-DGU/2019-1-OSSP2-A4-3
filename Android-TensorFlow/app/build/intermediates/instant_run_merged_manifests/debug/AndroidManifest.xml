@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -49,12 +49,14 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.amitshekhar.tflite.LoginActivy" />
         <activity android:name="com.amitshekhar.tflite.YoutubeView" />
         <activity android:name="com.amitshekhar.tflite.InfoFood" />
-        <activity android:name="com.amitshekhar.tflite.ContactActivity" />
+        <activity android:name="com.amitshekhar.tflite.InfomationActivity" />
         <activity android:name="com.amitshekhar.tflite.JapanActivity" />
         <activity android:name="com.amitshekhar.tflite.VietNamActivity" />
         <activity android:name="com.amitshekhar.tflite.KoreaActivity" />
+        <activity android:name="com.amitshekhar.tflite.MapActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -63,8 +65,6 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name="com.amitshekhar.tflite.MapActivity" />
-        <activity android:name="com.amitshekhar.tflite.SubActivity" />
         <activity android:name="com.amitshekhar.tflite.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

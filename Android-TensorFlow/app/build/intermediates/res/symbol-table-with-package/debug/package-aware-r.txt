@@ -1283,7 +1283,7 @@ drawable ic_vol_type_speaker_group_light
 drawable ic_vol_type_speaker_light
 drawable ic_vol_type_tv_dark
 drawable ic_vol_type_tv_light
-drawable main_image
+drawable main
 drawable mr_button_connected_dark
 drawable mr_button_connected_light
 drawable mr_button_connecting_dark
@@ -1318,7 +1318,6 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable picture_name
 drawable places_ic_clear
 drawable places_ic_search
 drawable powered_by_google_dark
@@ -1369,6 +1368,9 @@ drawable tooltip_frame_light
 id ALT
 id CTRL
 id FUNCTION
+id ImgviewResult1
+id ImgviewResult2
+id ImgviewResult3
 id META
 id SHIFT
 id SYM
@@ -1423,7 +1425,6 @@ id btnDetectObject
 id btnSelectAlbum
 id btnToggleCamera
 id button
-id button2
 id buttonPanel
 id button_0
 id button_1
@@ -1503,8 +1504,6 @@ id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
-id find_recipe
-id find_restaurant
 id fixed
 id focusMarkerContainer
 id foodCountry
@@ -1536,8 +1535,6 @@ id icon_uri
 id icon_view
 id ifRoom
 id image
-id imageView
-id imageView2
 id imageViewCountry
 id imageViewResult
 id imgspecialFood
@@ -1551,7 +1548,6 @@ id infoFoodMake
 id infoFoodName
 id infoFoodSave
 id infoFoodSearch
-id infoFoodView
 id instant_message
 id intent_action
 id intent_activity
@@ -1579,6 +1575,7 @@ id live_stream_seek_bar
 id loading_indicator
 id logo_only
 id lowest
+id main
 id map
 id masked
 id match_global_nicknames
@@ -1648,6 +1645,7 @@ id place_autocomplete_search_button
 id place_autocomplete_search_input
 id place_autocomplete_separator
 id plain
+id player
 id production
 id progressBar
 id progress_circular
@@ -1685,7 +1683,6 @@ id search_src_text
 id search_voice_btn
 id seek_bar
 id seek_bar_controls
-id select_album
 id select_dialog_listview
 id selectionDetails
 id shortcut
@@ -1724,7 +1721,6 @@ id surface_view_container
 id tabMode
 id tab_host
 id tag_transition_group
-id take_picture
 id tap
 id tapWithMarker
 id tbjapanFood
@@ -1739,7 +1735,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textTitle
 id textViewCountry
-id textViewResult
 id text_input_password_toggle
 id text_list_view
 id textinput_counter
@@ -1752,6 +1747,9 @@ id titleDividerNoCustom
 id title_template
 id title_view
 id toolbar
+id toolbarContact
+id toolbarDetection
+id toolbarMap
 id toolbarmain
 id top
 id topPanel
@@ -1774,6 +1772,7 @@ id wide
 id withText
 id wrap
 id wrap_content
+id youtubeButton
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -1819,16 +1818,15 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_camera
-layout activity_contact
 layout activity_food_info
+layout activity_info
 layout activity_japan
 layout activity_korea
+layout activity_login_activy
 layout activity_main
 layout activity_main2
 layout activity_map
-layout activity_sub
 layout activity_viet_nam
-layout activity_youtube_view
 layout cast_expanded_controller_activity
 layout cast_help_text
 layout cast_intro_overlay
@@ -1885,6 +1883,7 @@ layout support_simple_spinner_dropdown_item
 layout surface_view
 layout texture_view
 layout wallet_test_layout
+layout youtube_view
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description

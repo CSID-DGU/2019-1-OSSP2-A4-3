@@ -1,9 +1,11 @@
 package com.amitshekhar.tflite;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.amitshekhar.tflite.Interface.JapanFoodAdapter;
@@ -31,6 +33,7 @@ public class JapanActivity extends AppCompatActivity {
         Init();
         GetFoodCountry();
         ActionToolBar();
+        ClickFood();
         GetDataFood(page);
     }
     DatabaseReference mData;
@@ -55,6 +58,16 @@ public class JapanActivity extends AppCompatActivity {
             }
         });
     }
+    private void ClickFood(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(JapanActivity.this,InfoFood.class);
+                intent.putExtra("foodInfo", japanFoodList.get(i));
+                startActivity(intent);
+            }
+        });
+    }
     private void ActionToolBar() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -67,8 +80,7 @@ public class JapanActivity extends AppCompatActivity {
     }
     private void GetFoodCountry() {
         Bundle extras = getIntent().getExtras();
-        foodCountry= extras.getString("Country");
-        Log.d(TAG, foodCountry);
+        foodCountry= extras.getString("Country","Error");
     }
     private void Init() {
         toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.tbjapanFood);
