@@ -1,9 +1,0 @@
-<resources>
-
-    <string name="google_aps_API_key">AIzaSyDoFl2b-yoQ9gxQmp5K4ieIGXfxI-HTIRo</string>
-    <string name="google_places_key">AIzaSyA3kBUdIUmEx3vtLex55v3LKYEN1hhUvDE</string>
-    <string name="app_name">GoogleMapsGooglePlaces</string>
-    <string name="map">Map</string>
-
-
-</resources>

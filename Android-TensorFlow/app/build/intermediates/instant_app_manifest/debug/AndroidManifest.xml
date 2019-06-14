@@ -14,11 +14,15 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <uses-feature android:name="android.hardware.camera" />
     <uses-feature
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
@@ -42,6 +46,7 @@
     <uses-permission android:name="com.amitshekhar.tflite.permission.C2D_MESSAGE" />
 
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
@@ -50,7 +55,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.amitshekhar.tflite.LoginActivy" />
+        <activity android:name="com.amitshekhar.tflite.AccountActivity" />
         <activity android:name="com.amitshekhar.tflite.YoutubeView" />
         <activity android:name="com.amitshekhar.tflite.InfoFood" />
         <activity android:name="com.amitshekhar.tflite.InfomationActivity" />
@@ -58,6 +63,7 @@
         <activity android:name="com.amitshekhar.tflite.VietNamActivity" />
         <activity android:name="com.amitshekhar.tflite.KoreaActivity" />
         <activity android:name="com.amitshekhar.tflite.MapActivity" />
+        <activity android:name="com.amitshekhar.tflite.MainActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -66,7 +72,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name="com.amitshekhar.tflite.MainActivity" >
+        <activity android:name="com.amitshekhar.tflite.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

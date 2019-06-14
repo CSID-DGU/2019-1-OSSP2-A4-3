@@ -18,14 +18,12 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <com.wonderkiln.camerakit.CameraView
             android:id="@+id/cameraView"
             android:layout_width="372dp"
             android:layout_height="250dp"
             android:layout_gravity="top"
             android:layout_margin="20dp" />
-
         <LinearLayout
             android:padding="5dp"
             android:layout_width="match_parent"
@@ -57,56 +55,11 @@
                 android:id="@+id/imageViewResult"
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
-            <LinearLayout
-                android:orientation="horizontal"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerviewResult"
                 android:layout_width="match_parent"
-                android:layout_height="80dp">
-                <ImageView
-                    android:id="@+id/ImgviewResult1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp" />
-                <Button
-                    android:id="@+id/result1"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="10dp"
-                    android:fadeScrollbars="false"
-                    android:textColor="@android:color/black" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-                <ImageView
-                    android:id="@+id/ImgviewResult2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
-                <Button
-                    android:id="@+id/result2"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="10dp"
-                    android:fadeScrollbars="false"
-                    android:textColor="@android:color/black" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-                <ImageView
-                    android:id="@+id/ImgviewResult3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
-                <Button
-                    android:id="@+id/result3"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="10dp"
-                    android:fadeScrollbars="false"
-                    android:textColor="@android:color/black" />
-            </LinearLayout>
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
     </LinearLayout>
  </LinearLayout>

@@ -5,12 +5,22 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amitshekhar.tflite.Interface.SpecialFoodAdapter;
+import com.amitshekhar.tflite.Model.Food;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.wonderkiln.camerakit.CameraKitError;
 import com.wonderkiln.camerakit.CameraKitEvent;
 import com.wonderkiln.camerakit.CameraKitEventListener;
@@ -19,6 +29,7 @@ import com.wonderkiln.camerakit.CameraKitVideo;
 import com.wonderkiln.camerakit.CameraView;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -26,39 +37,33 @@ import java.util.concurrent.Executors;
 public class CameraActivity  extends AppCompatActivity {
 
     private static final String MODEL_PATH = "mobilenet_quant_v1_224.tflite";
-    private static final boolean QUANT = true;
+    private static final boolean QUANT = false;
     private static final String LABEL_PATH = "labels.txt";
     private static final int INPUT_SIZE = 299;
 
     private Classifier classifier;
     private Executor executor = Executors.newSingleThreadExecutor();
     private Button btnDetectObject, btnToggleCamera, btnSelectAlbum;
-    private Button resultButton1,resultButton2,resultButton3;
     private ImageView imageViewResult;
     private CameraView cameraView;
+    private RecyclerView recyclerViewResult;
 
     private Bitmap img;
     private boolean isFromAlbum = false;
 
     android.support.v7.widget.Toolbar toolbar;
+    private static final String TAG = "CameraActivity";
 
+    String [] result = {" "," "," "};
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         cameraView = findViewById(R.id.cameraView);
         imageViewResult = findViewById(R.id.imageViewResult);
-
-
-        final Intent result_button_click = new Intent(this, CameraActivity.class);
-        btnToggleCamera = findViewById(R.id.btnToggleCamera);
-        btnDetectObject = findViewById(R.id.btnDetectObject);
-        btnSelectAlbum = findViewById(R.id.btnSelectAlbum);
-        resultButton1 = findViewById(R.id.result1);
-        resultButton2 = findViewById(R.id.result2);
-        resultButton3 = findViewById(R.id.result3);
-        toolbar = findViewById(R.id.toolbarDetection);
+        Init();
         ActionToolBar();
+        getDataForDectiontionResult();
         cameraView.addCameraKitListener(new CameraKitEventListener() {
             @Override
             public void onEvent(CameraKitEvent cameraKitEvent) {
@@ -94,44 +99,32 @@ public class CameraActivity  extends AppCompatActivity {
                 for (String wo : words ){
                     System.out.println("Result" + wo);
                 }
-                resultButton1.setText(words[1]+ " " + words[2]);
-                resultButton2.setText(words[5]+ " " + words[6]);
-                resultButton3.setText(words[9]+ " " + words[10]);
 
-
-                resultButton1.setVisibility(View.VISIBLE);
-                resultButton2.setVisibility(View.VISIBLE);
-                resultButton3.setVisibility(View.VISIBLE);
-
+                if(words.length < 3)
+                {
+                    //resultButton1.setText("인식 가능한 결과가 없습니다");
+                    //resultButton1.setVisibility(View.VISIBLE);
+                }
+                else if(words.length < 6)
+                {
+                    result[0] = words[1];
+                }
+                else if(words.length < 9)
+                {
+                    result[0] = words[1];
+                    result[1] = words[4];
+                }
+                else if(words.length >= 9 )
+                {
+                    result[0] = words[1];
+                    result[1] = words[4];
+                    result[2] = words[7];
+                }
             }
-
             @Override
             public void onVideo(CameraKitVideo cameraKitVideo) {
-
             }
         });
-
-
-        //result버튼 눌럿을 때 이동
-        resultButton1.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-                startActivity(result_button_click);
-            }
-        });
-        resultButton2.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-                startActivity(result_button_click);
-            }
-        });
-        resultButton3.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-                startActivity(result_button_click);
-            }
-        });
-
         btnSelectAlbum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,11 +144,38 @@ public class CameraActivity  extends AppCompatActivity {
         btnDetectObject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d(TAG, "Camera Click");
                 cameraView.captureImage();
             }
         });
-
         initTensorFlowAndLoadModel();
+    }
+
+    ArrayList<Food> listResultFood;
+    SpecialFoodAdapter resultFoodAdapter;
+    private void Init()
+    {
+        btnToggleCamera = findViewById(R.id.btnToggleCamera);
+        btnDetectObject = findViewById(R.id.btnDetectObject);
+        btnSelectAlbum = findViewById(R.id.btnSelectAlbum);
+        toolbar = findViewById(R.id.toolbarDetection);
+        recyclerViewResult = findViewById(R.id.recyclerviewResult);
+
+        listResultFood = new ArrayList<>();
+        resultFoodAdapter = new SpecialFoodAdapter(listResultFood,getApplicationContext());
+        recyclerViewResult.setHasFixedSize(true);
+        recyclerViewResult.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+        recyclerViewResult.setAdapter(resultFoodAdapter);
+
+        resultFoodAdapter.setOnItemClickListener(new SpecialFoodAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int postion) {
+                final Food food = listResultFood.get(postion);
+                Intent intent = new Intent(CameraActivity.this,InfoFood.class);
+                intent.putExtra("foodInfo", food);
+                startActivity(intent);
+            }
+        });
     }
     private void ActionToolBar() {
         setSupportActionBar(toolbar);
@@ -164,6 +184,35 @@ public class CameraActivity  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+    }
+    DatabaseReference mData;
+    void getDataForDectiontionResult()
+    {
+        mData = FirebaseDatabase.getInstance().getReference();
+        mData.child("Food").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.d(TAG, "ChildEventListener");
+                for(DataSnapshot specialfoodData : dataSnapshot.getChildren()) {
+                    Food specialFood = specialfoodData.getValue(Food.class);
+                    if(specialFood.getName().equals(result[0]))
+                         listResultFood.add(0,specialFood);
+                    if(specialFood.getName().equals(result[1]))
+                        listResultFood.add(1,specialFood);
+                    if(specialFood.getName().equals(result[2]))
+                        listResultFood.add(2,specialFood);
+                    resultFoodAdapter.notifyDataSetChanged();
+                }
+                if(listResultFood.size() == 0)
+                {
+                    //인식이 안 되는 경우에는
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
             }
         });
     }
@@ -231,7 +280,6 @@ public class CameraActivity  extends AppCompatActivity {
             }
         });
     }
-
     private void makeButtonVisible() {
         runOnUiThread(new Runnable() {
             @Override

@@ -1,0 +1,2 @@
+# Referenced at D:\2019-1-OSSP2-A4-3\Android-TensorFlow\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:47
+-keep class android.support.multidex.MultiDexApplication { <init>(); }

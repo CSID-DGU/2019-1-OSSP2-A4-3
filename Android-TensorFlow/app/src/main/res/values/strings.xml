@@ -5,4 +5,10 @@
     <string name="google_youtube">AIzaSyCapA8W9u8hPsO1tKb0yX04L41nYUBVa30</string>
     <string name="toggle_camera">Toggle Camera</string>
     <string name="detect_object">Detect Object</string>
+    <string name="cbx">Please Checked/UnChecked</string>
+    <string-array name="countries">
+        <item>한국</item>
+        <item>베트남</item>
+        <item>일본</item>
+    </string-array>
 </resources>

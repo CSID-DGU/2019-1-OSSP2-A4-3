@@ -33,6 +33,7 @@ import android.widget.ViewFlipper;
 import com.amitshekhar.tflite.Interface.CountryAdapter;
 import com.amitshekhar.tflite.Interface.CountryAdapter;
 import com.amitshekhar.tflite.Interface.SpecialFoodAdapter;
+import com.amitshekhar.tflite.Model.Account;
 import com.amitshekhar.tflite.Model.Food;
 import com.amitshekhar.tflite.Model.FoodOfCountry;
 import com.google.android.gms.common.ConnectionResult;
@@ -86,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
             CheckConnectionInt.ShowToast(getApplicationContext(),"Check Internet connection please");
             finish();
         };
-
 //        Button take_picture = (Button) findViewById(R.id.take_picture);
 //        take_picture.setOnClickListener(new Button.OnClickListener() {
 //            @Override
@@ -185,10 +185,12 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-                    case 6: //Sign Out
+                    case 6: //MainPage
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
-                            Intent intent = new Intent(MainActivity.this,LoginActivy.class);
+                            GetAccountInfo();
+                            Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                            intent.putExtra("loginAccount",account);
                             startActivity(intent);
                         }else
                         {
@@ -230,7 +232,6 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot country : dataSnapshot.getChildren())
                 {
-                    Log.d(TAG, "GetDataCountries Go 2");
                     FoodOfCountry foodOfCountry = country.getValue(FoodOfCountry.class);
                     listCountry.add(foodOfCountry);
                     countryAdapter.notifyDataSetChanged();
@@ -245,8 +246,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    String selectedCountry = "";
+    private void GetSelectedCountry() {
+        Bundle extras = getIntent().getExtras();
+        selectedCountry= extras.getString("SelectedCountry");
+        Log.d(TAG, selectedCountry);
+    }
     private void GetDataSpecialFood()
     {
+        //GetSelectedCountry();
         mData = FirebaseDatabase.getInstance().getReference();
         mData.child("SpecialFood").addValueEventListener(new ValueEventListener() {
             @Override
@@ -254,6 +262,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "ChildEventListener");
                 for(DataSnapshot specialfoodData : dataSnapshot.getChildren()) {
                     Food specialFood = specialfoodData.getValue(Food.class);
+                    //if(specialFood.getCountry().equals(selectedCountry)){}
                     listSpecialFood.add(specialFood);
                     specialFoodAdapter.notifyDataSetChanged();
                 }
@@ -263,6 +272,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+    Account account;
+    private void GetAccountInfo() {
+        account =  (Account) getIntent().getSerializableExtra("accountInfo");
     }
     private void ActionBar()
     {
