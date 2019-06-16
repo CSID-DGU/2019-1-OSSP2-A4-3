@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "D:\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\c6a51b4cc7ce4fc9956183b664ae823d\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\4b9200cbe713a22d203039b2282bd25a\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

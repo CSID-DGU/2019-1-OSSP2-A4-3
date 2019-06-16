@@ -89,6 +89,7 @@ public class KoreaActivity extends AppCompatActivity {
     private void Init() {
         toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.tbkoreaFood);
         listView = findViewById(R.id.listKoreaFood);
+
         koreaFoodList = new ArrayList<>();
         koreaFoodAdapter = new KoreaFoodAdapter(getApplicationContext(),koreaFoodList);
         listView.setAdapter(koreaFoodAdapter);

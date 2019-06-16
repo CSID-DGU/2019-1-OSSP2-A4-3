@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "D:\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\579d596fae417a96f803fd6d360a2923\\res\\values-v11\\values.xml",
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\a398946c0bcf284d598a923fd547bdc1\\res\\values-v11\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

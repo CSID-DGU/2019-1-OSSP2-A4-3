@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
-        android:background="#E4A13A"
+        android:background="#D84C4C"
         app:titleTextColor="#f9f9f6"
         app:title="메인 페이지"
         android:id="@+id/toolbarAccout"
@@ -23,26 +23,27 @@
             android:layout_margin="10dp"
             android:src="@mipmap/ic_launcher" />
         <LinearLayout
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
                 android:id="@+id/accountName"
-                android:textSize="20dp"
+                android:textSize="30dp"
                 android:text="Account name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/accountGmail"
                 android:text="Gmail "
-                android:textSize="20dp"
+                android:textSize="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:layout_gravity="center"
                 android:id="@+id/signOut"
-                android:layout_margin="5dp"
+                android:layout_marginTop="15dp"
                 android:text="Sign Out"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp" />
@@ -53,10 +54,11 @@
         android:layout_marginLeft="10dp"
         android:textColor="#4CAF50"
         android:textSize="20dp"
-        android:text="본인 저장된 이미지"
+        android:text="My Images"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="30dp" />
     <android.support.v7.widget.RecyclerView
+        android:layout_margin="10dp"
         android:id="@+id/recyclerviewAccount"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+            "outputFile": "D:\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\99d29e363cc638ad8e75aeebe706b1d8\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\87fcb52e21814250bcf126639c879d3b\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

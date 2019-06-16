@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\2019-1-OSSP2-A4-3\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "D:\\Android-TensorFlow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\81cc31d2b77266991f207413400fbdb0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\c6a51b4cc7ce4fc9956183b664ae823d\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\4b9200cbe713a22d203039b2282bd25a\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wnddk\\.gradle\\caches\\transforms-2\\files-2.1\\34711e2d6aacefc74e37bbdd55157f6c\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

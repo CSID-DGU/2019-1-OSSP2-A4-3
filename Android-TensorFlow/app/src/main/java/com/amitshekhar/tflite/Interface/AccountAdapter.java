@@ -3,6 +3,7 @@ package com.amitshekhar.tflite.Interface;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amitshekhar.tflite.Model.Food;
+import com.amitshekhar.tflite.Model.ImageUser;
 import com.amitshekhar.tflite.R;
 import com.squareup.picasso.Picasso;
 
@@ -18,12 +20,13 @@ import java.util.ArrayList;
 public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ItemHolder> {
 
     Context context;
-    ArrayList<Food> saveFoodList;
+    ArrayList<ImageUser> saveFoodList;
 
     public AccountAdapter() {
     }
 
-    public AccountAdapter(Context context, ArrayList<Food> saveFoodList) {
+    public AccountAdapter(Context context, ArrayList<ImageUser> saveFoodList) {
+        Log.d("TAG", "Account Adapte");
         this.context = context;
         this.saveFoodList = saveFoodList;
     }
@@ -36,26 +39,26 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ItemHold
         this.context = context;
     }
 
-    public ArrayList<Food> getSaveFoodList() {
+    public ArrayList<ImageUser> getSaveFoodList() {
         return saveFoodList;
     }
 
-    public void setSaveFoodList(ArrayList<Food> saveFoodList) {
+    public void setSaveFoodList(ArrayList<ImageUser> saveFoodList) {
         this.saveFoodList = saveFoodList;
     }
     @NonNull
     @Override
     public ItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View _view = (View) LayoutInflater.from(parent.getContext()).inflate(R.layout.listview_specialfood,null);
+        View _view = (View) LayoutInflater.from(parent.getContext()).inflate(R.layout.listview_account_food,null);
         ItemHolder itemHolder = new ItemHolder(_view,mListener);
         return itemHolder;
     }
     @Override
     public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
-
-        Food savedFood = saveFoodList.get(position);
-        holder.txtFood_name.setText(savedFood.getName());
-        Picasso.with(context).load(savedFood.getImage()).into(holder.imgFood);
+        ImageUser savedFood = saveFoodList.get(position);
+        holder.txtFood_name.setText(savedFood.getNameFood());
+        Picasso.with(context).load(savedFood.getLinkImage()).into(holder.imgFood);
+        Log.d("TAG", "Account Adapter = " +savedFood.getNameFood()+ savedFood.getLinkImage());
     }
     private OnItemClickListener mListener;
     public interface OnItemClickListener{
@@ -84,10 +87,12 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ItemHold
         public void setTxtFood_name(TextView txtFood_name) {
             this.txtFood_name = txtFood_name;
         }
+
+
         public ItemHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
             imgFood = (ImageView) itemView.findViewById(R.id.accountSaveImage);
-            txtFood_name = (TextView) itemView.findViewById(R.id.foodName);
+            txtFood_name = (TextView) itemView.findViewById(R.id.saveFoodName);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

@@ -7,16 +7,23 @@ public class Account implements Serializable {
     String name;
     String email;
     String photo;
-    ArrayList<Food> listSavePhoto;
+    String Id;
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
 
     public Account() {
     }
 
-    public Account(String name, String email, String photo, ArrayList<Food> listSavePhoto) {
+    public Account(String name, String email, String photo) {
         this.name = name;
         this.email = email;
         this.photo = photo;
-        this.listSavePhoto = listSavePhoto;
     }
 
     public String getName() {
@@ -41,13 +48,5 @@ public class Account implements Serializable {
 
     public void setPhoto(String photo) {
         this.photo = photo;
-    }
-
-    public ArrayList<Food> getListSavePhoto() {
-        return listSavePhoto;
-    }
-
-    public void setListSavePhoto(ArrayList<Food> listSavePhoto) {
-        this.listSavePhoto = listSavePhoto;
     }
 }

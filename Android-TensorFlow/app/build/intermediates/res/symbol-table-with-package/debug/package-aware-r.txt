@@ -1514,7 +1514,10 @@ id focusMarkerContainer
 id foodCountry
 id foodDescrip
 id foodImage
+id foodImageDetection
 id foodName
+id foodNameDetection
+id foodPercent
 id foodinfo
 id forever
 id front
@@ -1669,7 +1672,7 @@ id right_icon
 id right_side
 id sandbox
 id satellite
-id saveDate
+id saveFoodName
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1832,6 +1835,7 @@ layout activity_account
 layout activity_camera
 layout activity_food_info
 layout activity_info
+layout activity_info_food_with_name
 layout activity_japan
 layout activity_korea
 layout activity_main
@@ -1861,6 +1865,7 @@ layout design_text_input_password_icon
 layout layout_focus_marker
 layout listview_account_food
 layout listview_country
+layout listview_detection
 layout listview_food
 layout listview_specialfood
 layout mr_chooser_dialog

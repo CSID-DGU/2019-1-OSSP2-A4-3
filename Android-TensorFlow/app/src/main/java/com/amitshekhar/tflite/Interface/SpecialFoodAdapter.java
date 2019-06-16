@@ -3,6 +3,7 @@ package com.amitshekhar.tflite.Interface;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,10 +52,10 @@ public class SpecialFoodAdapter extends RecyclerView.Adapter<SpecialFoodAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
-
         Food specialFood = specialFoodsList.get(position);
         holder.txtFood_name.setText(specialFood.getName());
         holder.txtFood_country.setText(specialFood.getCountry());
+        Log.d("Display detection resul", "Send Account = " + specialFood.getName() + specialFood.getCountry());
         Picasso.with(context).load(specialFood.getImage()).into(holder.imgFood);
     }
     private OnItemClickListener mListener;

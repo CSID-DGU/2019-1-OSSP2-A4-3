@@ -8,7 +8,7 @@
     tools:context=".KoreaActivity">
 
     <android.support.v7.widget.Toolbar
-        android:background="#E4A13A"
+        android:background="#D84C4C"
         app:titleTextColor="#f9f9f6"
         app:title="Contact"
         android:id="@+id/toolbarContact"

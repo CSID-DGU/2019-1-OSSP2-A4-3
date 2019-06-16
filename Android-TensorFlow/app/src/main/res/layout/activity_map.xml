@@ -5,13 +5,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <android.support.v7.widget.Toolbar
-        android:background="#E4A13A"
+        android:background="#D84C4C"
         app:titleTextColor="#f9f9f6"
         app:title="Google Map"
         android:id="@+id/toolbarMap"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"></android.support.v7.widget.Toolbar>
-
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"

@@ -7,7 +7,7 @@
     tools:context=".VietNamActivity"
     android:orientation="vertical">
     <android.support.v7.widget.Toolbar
-        android:background="#E4A13A"
+        android:background="#D84C4C"
         app:titleTextColor="#f9f9f6"
         app:title="베트남 음식"
         android:id="@+id/tbvietnamFood"

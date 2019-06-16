@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,7 +9,7 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
-        android:background="#E4A13A"
+        android:background="#D84C4C"
         app:titleTextColor="#f9f9f6"
         app:title="Detection"
         android:id="@+id/toolbarDetection"
@@ -18,48 +19,72 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <com.wonderkiln.camerakit.CameraView
             android:id="@+id/cameraView"
-            android:layout_width="372dp"
-            android:layout_height="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
             android:layout_gravity="top"
             android:layout_margin="20dp" />
         <LinearLayout
-            android:padding="5dp"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="70dp"
             android:orientation="horizontal">
             <Button
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:textColor="#ffff"
+                android:background="#D84C4C"
                 android:id="@+id/btnDetectObject"
-                android:layout_marginLeft="5dp"
                 android:text="사진 좔영"
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <Button
+                android:layout_margin="10dp"
+                android:textColor="#ffff"
+                android:background="#D84C4C"
+                android:layout_weight="1"
                 android:id="@+id/btnSelectAlbum"
                 android:text="사진 가져오기"
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
             <Button
+                android:layout_margin="10dp"
+                android:textColor="#ffff"
+                android:background="#D84C4C"
+                android:layout_weight="1"
                 android:id="@+id/btnToggleCamera"
                 android:text="카메라 돌리"
-                android:layout_width="129dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_margin="20dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/imageViewResult"
-                android:layout_width="match_parent"
-                android:layout_height="200dp" />
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerviewResult"
+
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-            </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:id="@+id/imageViewResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerviewResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </ScrollView>
+
         </LinearLayout>
     </LinearLayout>
  </LinearLayout>

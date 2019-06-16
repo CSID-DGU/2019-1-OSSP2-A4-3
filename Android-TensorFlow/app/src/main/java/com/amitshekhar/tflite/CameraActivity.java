@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amitshekhar.tflite.Interface.KoreaFoodAdapter;
+import com.amitshekhar.tflite.Interface.ResultFoodAdapter;
 import com.amitshekhar.tflite.Interface.SpecialFoodAdapter;
 import com.amitshekhar.tflite.Model.Food;
 import com.google.firebase.database.DataSnapshot;
@@ -54,6 +56,9 @@ public class CameraActivity  extends AppCompatActivity {
     android.support.v7.widget.Toolbar toolbar;
     private static final String TAG = "CameraActivity";
 
+
+    ArrayList<Food> listResultFood;
+    ResultFoodAdapter resultFoodAdapter;
     String [] result = {" "," "," "};
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -63,7 +68,7 @@ public class CameraActivity  extends AppCompatActivity {
         imageViewResult = findViewById(R.id.imageViewResult);
         Init();
         ActionToolBar();
-        getDataForDectiontionResult();
+
         cameraView.addCameraKitListener(new CameraKitEventListener() {
             @Override
             public void onEvent(CameraKitEvent cameraKitEvent) {
@@ -120,6 +125,7 @@ public class CameraActivity  extends AppCompatActivity {
                     result[1] = words[4];
                     result[2] = words[7];
                 }
+                getDataForDectiontionResult();
             }
             @Override
             public void onVideo(CameraKitVideo cameraKitVideo) {
@@ -151,8 +157,6 @@ public class CameraActivity  extends AppCompatActivity {
         initTensorFlowAndLoadModel();
     }
 
-    ArrayList<Food> listResultFood;
-    SpecialFoodAdapter resultFoodAdapter;
     private void Init()
     {
         btnToggleCamera = findViewById(R.id.btnToggleCamera);
@@ -162,12 +166,12 @@ public class CameraActivity  extends AppCompatActivity {
         recyclerViewResult = findViewById(R.id.recyclerviewResult);
 
         listResultFood = new ArrayList<>();
-        resultFoodAdapter = new SpecialFoodAdapter(listResultFood,getApplicationContext());
+        resultFoodAdapter = new ResultFoodAdapter(listResultFood,getApplicationContext());
         recyclerViewResult.setHasFixedSize(true);
-        recyclerViewResult.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+        recyclerViewResult.setLayoutManager(new GridLayoutManager(getApplicationContext(),1));
         recyclerViewResult.setAdapter(resultFoodAdapter);
 
-        resultFoodAdapter.setOnItemClickListener(new SpecialFoodAdapter.OnItemClickListener() {
+        resultFoodAdapter.setOnItemClickListener(new ResultFoodAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int postion) {
                 final Food food = listResultFood.get(postion);
@@ -190,6 +194,7 @@ public class CameraActivity  extends AppCompatActivity {
     DatabaseReference mData;
     void getDataForDectiontionResult()
     {
+        System.out.println("DATA SEARCH" + result[0]);
         mData = FirebaseDatabase.getInstance().getReference();
         mData.child("Food").addValueEventListener(new ValueEventListener() {
             @Override
@@ -197,13 +202,16 @@ public class CameraActivity  extends AppCompatActivity {
                 Log.d(TAG, "ChildEventListener");
                 for(DataSnapshot specialfoodData : dataSnapshot.getChildren()) {
                     Food specialFood = specialfoodData.getValue(Food.class);
-                    if(specialFood.getName().equals(result[0]))
-                         listResultFood.add(0,specialFood);
+                    if(specialFood.getName().equals(result[0])) {
+                        System.out.println("DATA SEARCH Successful" + result[0]);
+                        listResultFood.add(0, specialFood);
+                        resultFoodAdapter.notifyDataSetChanged();
+                        System.out.println("NotifyDataChanged");
+                    }
                     if(specialFood.getName().equals(result[1]))
                         listResultFood.add(1,specialFood);
                     if(specialFood.getName().equals(result[2]))
                         listResultFood.add(2,specialFood);
-                    resultFoodAdapter.notifyDataSetChanged();
                 }
                 if(listResultFood.size() == 0)
                 {
@@ -226,18 +234,13 @@ public class CameraActivity  extends AppCompatActivity {
                     InputStream in = getContentResolver().openInputStream(data.getData());
                     img = BitmapFactory.decodeStream(in);
                     in.close();
-
                     isFromAlbum = true;
                     //camera activity로 넘어감
-
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }
-
-
     }
     @Override
     protected void onResume() {

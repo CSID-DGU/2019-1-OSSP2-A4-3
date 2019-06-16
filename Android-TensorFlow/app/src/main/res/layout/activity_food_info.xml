@@ -10,7 +10,7 @@
         android:id="@+id/foodinfo"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FF9800"
+        android:background="#D84C4C"
         app:title="Food Information"
         app:titleTextColor="#fff"></android.support.v7.widget.Toolbar>
     <LinearLayout
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="FoodName"
-                android:textColor="#C91212"
+                android:textColor="#D84C4C"
                 android:textSize="30sp" />
 
             <TextView
@@ -48,16 +48,21 @@
                 android:textSize="20sp" />
 
             <Button
+                android:layout_margin="3dp"
+                android:textColor="#ffff"
+                android:background="#D84C4C"
                 android:id="@+id/infoFoodSave"
                 android:layout_width="200dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:gravity="center"
                 android:text="Image Save" />
 
             <Button
+                android:textColor="#ffff"
+                android:background="#D84C4C"
                 android:id="@+id/infoFoodSearch"
                 android:layout_width="200dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:gravity="center"
                 android:text="Search Map" />
         </LinearLayout>
@@ -71,8 +76,8 @@
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1,Description Food"
-            android:textColor="#3F51B5"
+            android:text="1,음식 소개"
+            android:textColor="#D84C4C"
             android:textSize="20sp" />
 
         <TextView
@@ -85,8 +90,8 @@
             android:id="@+id/editText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2,Instructions Make"
-            android:textColor="#3F51B5"
+            android:text="2,만든 방법"
+            android:textColor="#D84C4C"
             android:textSize="20sp" />
 
         <TextView
@@ -96,11 +101,13 @@
             android:layout_margin="5dp"
             android:text="Youtube에서 참고하시고 만들어보세요 !!!" />
         <Button
+            android:textColor="#ffff"
+            android:background="#D84C4C"
             android:id="@+id/youtubeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Youtube Play" />
+            android:text="동영상 보니" />
 
     </LinearLayout>
 </LinearLayout>

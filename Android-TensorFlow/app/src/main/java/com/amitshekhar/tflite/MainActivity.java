@@ -2,8 +2,10 @@ package com.amitshekhar.tflite;
 
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -87,27 +89,6 @@ public class MainActivity extends AppCompatActivity {
             CheckConnectionInt.ShowToast(getApplicationContext(),"Check Internet connection please");
             finish();
         };
-//        Button take_picture = (Button) findViewById(R.id.take_picture);
-//        take_picture.setOnClickListener(new Button.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent_camera = new Intent(MainActivity.this, CameraActivity.class);
-//                startActivity(intent_camera);
-//            }
-//        });
-//        //todo : recipe 선택
-//        //아직 어떻게 할지 모르겠음
-//
-//        //todo : 앨범에서 사진 선택
-//        Button openimg = (Button) findViewById(R.id.select_album);
-//        openimg.setOnClickListener(new Button.OnClickListener() {
-//            public void onClick(View view) {
-//                Intent intent_album = new Intent(Intent.ACTION_GET_CONTENT);
-//                intent_album.setType("image/*");
-//                intent_album.setAction(Intent.ACTION_GET_CONTENT);
-//                startActivityForResult(intent_album, 1);
-//            }
-//        });
     }
     private void ClickCountries() {
         listViewMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -119,8 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
-                            Intent intent = new Intent(MainActivity.this,MainActivity.class);
-                            startActivity(intent);
+                            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                         }else
                         {
                             CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
@@ -189,9 +169,14 @@ public class MainActivity extends AppCompatActivity {
                         if(CheckConnectionInt.haveNetworkConnection(getApplicationContext()))
                         {
                             GetAccountInfo();
-                            Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-                            intent.putExtra("loginAccount",account);
-                            startActivity(intent);
+                            if(account != null) {
+                                Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+                                intent.putExtra("loginAccount", account);
+                                startActivity(intent);
+                            }else
+                            {
+                                QuesLogin();
+                            }
                         }else
                         {
                             CheckConnectionInt.ShowToast(getApplicationContext(),"Check connect internet,please");
@@ -201,6 +186,27 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void QuesLogin()
+    {
+        AlertDialog.Builder alb = new AlertDialog.Builder(this);
+        alb.setTitle("알림!");
+        alb.setIcon(R.mipmap.ic_launcher);
+        alb.setMessage("이 기능을 하기 위해서 먼저 로그인을 해주십시오! 로그인 화면을 이동합니까?");
+        alb.setPositiveButton("네", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        alb.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        alb.show();
     }
 
     private void ActionViewFlipper(){
@@ -238,7 +244,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 listCountry.add(4,new FoodOfCountry("Detection","http://www.iconarchive.com/download/i99778/designbolts/free-multimedia/Dslr-Camera.ico"));
                 listCountry.add(5,new FoodOfCountry("Contact","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3pbMGP9FJgbUnadSQunt7_7l6HmZ0VvkGylCLJlHgwtDxqHxG"));
-                listCountry.add(6,new FoodOfCountry("Loading","https://images.assetsdelivery.com/compings_v2/feelisgood/feelisgood1709/feelisgood170901740.jpg"));
+                listCountry.add(6,new FoodOfCountry("My Page","https://images.assetsdelivery.com/compings_v2/feelisgood/feelisgood1709/feelisgood170901740.jpg"));
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -249,22 +255,23 @@ public class MainActivity extends AppCompatActivity {
     String selectedCountry = "";
     private void GetSelectedCountry() {
         Bundle extras = getIntent().getExtras();
-        selectedCountry= extras.getString("SelectedCountry");
+        selectedCountry= extras.getString("SelectedCoutry");
         Log.d(TAG, selectedCountry);
-    }
+}
     private void GetDataSpecialFood()
     {
-        //GetSelectedCountry();
+        GetSelectedCountry();
         mData = FirebaseDatabase.getInstance().getReference();
         mData.child("SpecialFood").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d(TAG, "ChildEventListener");
+                Log.d("SELECT", selectedCountry);
                 for(DataSnapshot specialfoodData : dataSnapshot.getChildren()) {
                     Food specialFood = specialfoodData.getValue(Food.class);
-                    //if(specialFood.getCountry().equals(selectedCountry)){}
-                    listSpecialFood.add(specialFood);
-                    specialFoodAdapter.notifyDataSetChanged();
+                    if(specialFood.getCountry().equals(selectedCountry)) {
+                        listSpecialFood.add(specialFood);
+                        specialFoodAdapter.notifyDataSetChanged();
+                    }
                 }
             }
             @Override
@@ -274,8 +281,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     Account account;
+    String scountry;
+    private void GetSelectCountry()
+    {
+        Bundle extras = getIntent().getExtras();
+        scountry= extras.getString("SelectedCountry");
+        Log.d(TAG, scountry);
+    }
     private void GetAccountInfo() {
-        account =  (Account) getIntent().getSerializableExtra("accountInfo");
+        account =  (Account) getIntent().getSerializableExtra("Account");
     }
     private void ActionBar()
     {

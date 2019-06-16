@@ -16,6 +16,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class YoutubeView extends YouTubeBaseActivity {
     public static final String YT_API_KEY = "AIzaSyAy2LOt4NguPR6eV7eHIbGndpZM1EhOUbg";
     Button button;
+    String link;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,8 @@ public class YoutubeView extends YouTubeBaseActivity {
                     @Override
                     public void onInitializationSuccess(YouTubePlayer.Provider provider,
                                                         YouTubePlayer youTubePlayer, boolean b) {
-                        youTubePlayer.cueVideo("5qntqegTB0k");
+                        GetLink();
+                        youTubePlayer.cueVideo(link);
                     }
                     @Override
                     public void onInitializationFailure(YouTubePlayer.Provider provider,
@@ -46,5 +48,8 @@ public class YoutubeView extends YouTubeBaseActivity {
             }
         });
     }
-
+    private void GetLink() {
+        Bundle extras = getIntent().getExtras();
+        link= extras.getString("YoutubeLink");
+    }
 }

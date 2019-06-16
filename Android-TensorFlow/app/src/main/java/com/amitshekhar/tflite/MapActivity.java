@@ -57,7 +57,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final float DEFAULT_ZOOM = 15f;
-
     //vars
     private Boolean mLocationPermissionsGranted = false;
     private GoogleMap mMap;
@@ -162,21 +161,18 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         });
     }
     private String GetFoodCountry() {
-        Bundle extras = getIntent().getExtras();
-        return extras.getString("SearchKey", "Error");
-
+       Bundle extras = getIntent().getExtras();
+       return extras.getString("SearchKey", "Error");
     }
     //////////////////Show Current Location  - End //////////////////
     public void findRestaurants()
     {
-        Intent intent_camera = new Intent(MapActivity.this, MapActivity.class);
-        startActivity(intent_camera);
         String searchKey  = GetFoodCountry();
         Log.d(TAG, "Find near restaurants location = "+currentLocation.getLatitude()+","+currentLocation.getLongitude());
         StringBuilder stringBuilder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         stringBuilder.append("location="+currentLocation.getLatitude()+","+currentLocation.getLongitude());
         stringBuilder.append("&radius="+500);
-        stringBuilder.append("&keyword="+"restaurant");
+        stringBuilder.append("&keyword="+ searchKey);
         stringBuilder.append("&key="+ getResources().getString(R.string.google_places_key));
 
         String url = stringBuilder.toString();

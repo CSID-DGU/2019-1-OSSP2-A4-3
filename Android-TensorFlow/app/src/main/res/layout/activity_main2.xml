@@ -13,7 +13,8 @@
             android:layout_height="match_parent">
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbarmain"
-                android:background="#22AC27"
+                android:background="#D84C4C"
+                app:titleTextColor="#f9f9f6"
                 app:title="Main Home"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize">
@@ -34,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="오늘 음식 추천 "
-                    android:textColor="#571A1A"
+                    android:textColor="#D84C4C"
                     android:textStyle="bold" />
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerview"

@@ -2,36 +2,37 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main">
+    android:background="#D84C4C">
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_firebase_logo"
-        />
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_firebase_logo" />
+
     <ProgressBar
-        android:visibility="invisible"
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="550dp" />
+        android:layout_marginTop="550dp"
+        android:visibility="invisible" />
     <Spinner
+        android:scrollbarSize="3dp"
         android:entries="@array/countries"
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="63dp" />
+        android:layout_marginTop="260dp" />
     <LinearLayout
-        android:layout_marginBottom="5dp"
-        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginTop="300dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/login"
+            android:layout_margin="10dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"

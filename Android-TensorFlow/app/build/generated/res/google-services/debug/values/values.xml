@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">388728261789-486960re0g67i7s8thc3mtjp90sceonp.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://fooddectection.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">388728261789</string>
-    <string name="google_api_key" translatable="false">AIzaSyCeDXZZ9aNVBj-yFk7BzKl9bjnfrYNKAc8</string>
-    <string name="google_app_id" translatable="false">1:388728261789:android:3a602244ec808412</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCeDXZZ9aNVBj-yFk7BzKl9bjnfrYNKAc8</string>
-    <string name="google_storage_bucket" translatable="false">fooddectection.appspot.com</string>
-    <string name="project_id" translatable="false">fooddectection</string>
+    <string name="default_web_client_id" translatable="false">1017687022701-2d3hp0bfke64hv7junirjrg4oaepclik.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://fooddectection-1560536259423.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1017687022701</string>
+    <string name="google_api_key" translatable="false">AIzaSyC5lFOzSDx4d0OnOOWC6VxPYf2ezHDBS0E</string>
+    <string name="google_app_id" translatable="false">1:1017687022701:android:3a602244ec808412</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC5lFOzSDx4d0OnOOWC6VxPYf2ezHDBS0E</string>
+    <string name="google_storage_bucket" translatable="false">fooddectection-1560536259423.appspot.com</string>
+    <string name="project_id" translatable="false">fooddectection-1560536259423</string>
 </resources>
