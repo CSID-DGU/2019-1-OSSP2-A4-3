@@ -19,7 +19,8 @@ Android SDK 27 Version
 <br>
 
 #### 프로젝트 설명
- 이 프로젝트는 한국에 방문하는 외국인들이 이름을 잘 모르는 한식을 먹고 싶을 때 사진을 찍어서 주변 음식점을 찾을 수 있도록 하기 위해 시작!<br>
+ 이 프로젝트는 한국에 방문하는 외국인들이 이름을 잘 모르는 음식을 먹고 싶을 때 사진을 찍어서 주변 음식점을 찾을 수 있도록 하기 위해 시작!<br>
+ 주로 한식인 식사류 36종과 약과를 포함한 디저트류 16종을 포함하여 총 52종의 음식의 인식을 지원한다.
  모델의 architecture는 inception resnet v2 를 사용하였다.<br>
  (이름은 mobilenet_quant_v1_224로 되어있지만 관계없음)<br>
  모델 링크 : https://drive.google.com/open?id=1OwwKwRP7kqvcnL1O-8IBgd5NGHPVnFcg <br>
