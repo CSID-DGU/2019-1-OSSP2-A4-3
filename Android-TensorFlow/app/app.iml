@@ -230,5 +230,9 @@
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services:12.0.1@aar" level="project" />
     <orderEntry type="module" module-name="YouTubeAndroidPlayerApi" />
     <orderEntry type="module" module-name="YouTubeAndroidPlayerApi" />
+    <orderEntry type="module" module-name="YouTubeAndroidPlayerApi" />
+    <orderEntry type="module" module-name="YouTubeAndroidPlayerApi" />
+    <orderEntry type="module" module-name="YouTubeAndroidPlayerApi" />
+    <orderEntry type="module" module-name="YouTubeAndroidPlayerApi" />
   </component>
 </module>

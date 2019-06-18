@@ -19,6 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#D84C4C"
-        android:text="훔 페이지 이동"
+        android:text="HOME"
         android:textColor="#f9f9f6" />
 </RelativeLayout>

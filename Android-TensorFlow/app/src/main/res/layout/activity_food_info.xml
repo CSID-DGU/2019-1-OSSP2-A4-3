@@ -76,7 +76,7 @@
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1,음식 소개"
+            android:text="1. Description"
             android:textColor="#D84C4C"
             android:textSize="20sp" />
 
@@ -90,7 +90,7 @@
             android:id="@+id/editText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2,만든 방법"
+            android:text="2. How to make"
             android:textColor="#D84C4C"
             android:textSize="20sp" />
 
@@ -100,14 +100,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:text="Youtube에서 참고하시고 만들어보세요 !!!" />
+
         <Button
-            android:textColor="#ffff"
-            android:background="#D84C4C"
             android:id="@+id/youtubeButton"
-            android:layout_width="wrap_content"
+            android:layout_width="279dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="동영상 보니" />
+            android:background="#D84C4C"
+            android:text="watch in youtube"
+            android:textColor="#ffff" />
 
     </LinearLayout>
 </LinearLayout>

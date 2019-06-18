@@ -10,7 +10,7 @@
     <android.support.v7.widget.Toolbar
         android:background="#D84C4C"
         app:titleTextColor="#f9f9f6"
-        app:title="일본 음식"
+        app:title="JAPAN"
         android:id="@+id/tbjapanFood"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"></android.support.v7.widget.Toolbar>

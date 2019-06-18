@@ -470,13 +470,13 @@ public final class R {
         public static final int text1 = 0x7f090175;
         public static final int text2 = 0x7f090176;
         public static final int textTitle = 0x7f090179;
-        public static final int text_list_view = 0x7f09017c;
-        public static final int thing_proto = 0x7f090180;
-        public static final int title_view = 0x7f090185;
-        public static final int toolbar = 0x7f090186;
-        public static final int url = 0x7f090197;
-        public static final int wide = 0x7f09019d;
-        public static final int wrap_content = 0x7f0901a0;
+        public static final int text_list_view = 0x7f09017d;
+        public static final int thing_proto = 0x7f090181;
+        public static final int title_view = 0x7f090186;
+        public static final int toolbar = 0x7f090187;
+        public static final int url = 0x7f090198;
+        public static final int wide = 0x7f09019e;
+        public static final int wrap_content = 0x7f0901a1;
     }
     public static final class integer {
         private integer() {}

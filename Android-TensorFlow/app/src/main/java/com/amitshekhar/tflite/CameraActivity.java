@@ -59,13 +59,15 @@ public class CameraActivity  extends AppCompatActivity {
 
     ArrayList<Food> listResultFood;
     ResultFoodAdapter resultFoodAdapter;
-    String [] result = {" "," "," "};
+    String [] result;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         cameraView = findViewById(R.id.cameraView);
         imageViewResult = findViewById(R.id.imageViewResult);
+
+
         Init();
         ActionToolBar();
 
@@ -84,11 +86,14 @@ public class CameraActivity  extends AppCompatActivity {
             public void onImage(CameraKitImage cameraKitImage) {
 
                 Bitmap bitmap;
-
+                result = new String[] {" "," "," "};    //그냥 아까 하던거로 하면 안됨? 에러 안나는데
+                listResultFood.clear();
+                getResult();
                 if(isFromAlbum == false) {
                     bitmap = cameraKitImage.getBitmap();
                 }
                 else{
+
                     bitmap = img;
                 }
 
@@ -102,7 +107,7 @@ public class CameraActivity  extends AppCompatActivity {
                 String[] words = results.toString().split("\\s");
 
                 for (String wo : words ){
-                    System.out.println("Result" + wo);
+                    System.out.println(" Split Result " + wo);
                 }
 
                 if(words.length < 3)
@@ -157,6 +162,12 @@ public class CameraActivity  extends AppCompatActivity {
         initTensorFlowAndLoadModel();
     }
 
+    private  void getResult()
+    {
+        listResultFood.add(new Food());
+        listResultFood.add(new Food());
+        listResultFood.add(new Food());
+    }
     private void Init()
     {
         btnToggleCamera = findViewById(R.id.btnToggleCamera);
@@ -166,6 +177,7 @@ public class CameraActivity  extends AppCompatActivity {
         recyclerViewResult = findViewById(R.id.recyclerviewResult);
 
         listResultFood = new ArrayList<>();
+        getResult();
         resultFoodAdapter = new ResultFoodAdapter(listResultFood,getApplicationContext());
         recyclerViewResult.setHasFixedSize(true);
         recyclerViewResult.setLayoutManager(new GridLayoutManager(getApplicationContext(),1));
@@ -194,24 +206,28 @@ public class CameraActivity  extends AppCompatActivity {
     DatabaseReference mData;
     void getDataForDectiontionResult()
     {
-        System.out.println("DATA SEARCH" + result[0]);
         mData = FirebaseDatabase.getInstance().getReference();
         mData.child("Food").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.d(TAG, "ChildEventListener");
                 for(DataSnapshot specialfoodData : dataSnapshot.getChildren()) {
+                    resultFoodAdapter.notifyDataSetChanged();
                     Food specialFood = specialfoodData.getValue(Food.class);
+                    Log.d(TAG, "List Food" + specialFood.getName());
                     if(specialFood.getName().equals(result[0])) {
-                        System.out.println("DATA SEARCH Successful" + result[0]);
+                        Log.d(TAG, "Successful" + result[0]);
                         listResultFood.add(0, specialFood);
-                        resultFoodAdapter.notifyDataSetChanged();
-                        System.out.println("NotifyDataChanged");
                     }
-                    if(specialFood.getName().equals(result[1]))
-                        listResultFood.add(1,specialFood);
-                    if(specialFood.getName().equals(result[2]))
-                        listResultFood.add(2,specialFood);
+                    if(specialFood.getName().equals(result[1])) {
+                        Log.d(TAG, "Successful" + result[1]);
+                        listResultFood.add(1, specialFood);
+                    }
+                    if(specialFood.getName().equals(result[2])) {
+                        Log.d(TAG, "Successful" + result[2]);
+                        listResultFood.add(2, specialFood);
+                    }
+                    resultFoodAdapter.notifyDataSetChanged();
                 }
                 if(listResultFood.size() == 0)
                 {

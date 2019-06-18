@@ -107,13 +107,13 @@ public final class R {
         public static final int tag_transition_group = 0x7f09016c;
         public static final int text = 0x7f090174;
         public static final int text2 = 0x7f090176;
-        public static final int time = 0x7f090181;
-        public static final int title = 0x7f090182;
-        public static final int transition_current_scene = 0x7f090190;
-        public static final int transition_layout_save = 0x7f090191;
-        public static final int transition_position = 0x7f090192;
-        public static final int transition_scene_layoutid_cache = 0x7f090193;
-        public static final int transition_transform = 0x7f090194;
+        public static final int time = 0x7f090182;
+        public static final int title = 0x7f090183;
+        public static final int transition_current_scene = 0x7f090191;
+        public static final int transition_layout_save = 0x7f090192;
+        public static final int transition_position = 0x7f090193;
+        public static final int transition_scene_layoutid_cache = 0x7f090194;
+        public static final int transition_transform = 0x7f090195;
     }
     public static final class integer {
         private integer() {}

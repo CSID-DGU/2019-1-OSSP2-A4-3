@@ -1747,6 +1747,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textTitle
+id textView
 id textViewCountry
 id text_input_password_toggle
 id text_list_view
