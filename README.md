@@ -114,7 +114,7 @@ Android SDK 27 Version
 
 
 #### 모델 성능 평가
-<img src="https://user-images.githubusercontent.com/48276736/59683898-f0976b80-9213-11e9-9d3b-339cb799d7a2.PNG>
+<img src="https://user-images.githubusercontent.com/48276736/59683898-f0976b80-9213-11e9-9d3b-339cb799d7a2.PNG">
  recall_5 약 99%, accuracy 약 91.5% 의 성능을 보인다.
  어플리케이션에서의 동작할 경우에는 lite로 변환함에 따라서 성능이 약간 저하된다.
           
