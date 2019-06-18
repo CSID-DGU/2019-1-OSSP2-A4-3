@@ -13,7 +13,7 @@
 <br>
 #### 실행 환경
 Android Studio<br>
-Android SDK 27 Version<br>
+Android SDK 27 Version
 <br>
 <br>
 #### 프로젝트 설명
