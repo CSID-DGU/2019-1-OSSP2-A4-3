@@ -5,39 +5,36 @@
 ### 2019년도 1학기 공개SW프로젝트 2분반 A4팀 (3조)
 
 #### 팀원
-2017112154 응웬딩흐엉 : 어플리케이션 담당.
-
-2015112120 임성두 : 모델 학습 및 발표 담당.
-
-2014112081 정세인 : 어플리케이션 담당.
-
+2017112154 응웬딩흐엉 : 어플리케이션 담당.<br>
+2015112120 임성두 : 모델 학습 및 발표 담당.<br>
+2014112081 정세인 : 어플리케이션 담당.<br>
 2015112109 탁성환 : 모델 학습 담당, 팀장.
-
-
+<br>
+<br>
 #### 실행 환경
 Android Studio
 Android SDK 27 Version
-
-
+<br>
+<br>
 #### 프로젝트 설명
  이 프로젝트는 한국에 방문하는 외국인들이 이름을 잘 모르는 한식을 먹고 싶을 때 사진을 찍어서 주변 음식점을 찾을 수 있도록 하기 위해 시작!<br>
  모델 링크 : https://drive.google.com/open?id=1OwwKwRP7kqvcnL1O-8IBgd5NGHPVnFcg <br>
  apk 링크 : https://drive.google.com/open?id=1qHBacAkuZTnvCiBh2YVdxEtyPZoJRCOv
-
-
+<br>
+<br>
 #### 실행 방법
 1. github에 올라와있는 파일을 다운로드 후 Android Studio에서 Android-TensorFlow 폴더를 open.
 2. 구글 드라이브 링크로 들어가 모델을 다운로드 후 Android-TensorFlow/app/src/main/assets/ 에 저장.
 3. 1번의 방법대로 open 후 build 하여 휴대전화와 연결 후 run 하거나 build apk 이후 휴대전화에 다운로드하여 설치.
 또는 구글 드라이브 링크로 들어가 apk를 다운로드 후 설치.
-
-
+<br>
+<br>
 #### 실행 시 유의사항
 1. Android Studio에서 open 할 때 다운로드한 전체 폴더를 하지 말고 반드시 Android-TensorFlow 폴더로 open 할 것!
 2. Android-TensorFlow/app/src/main/java/com/amitshekhar/tflite/ 의 CameraActivity.java 안의 MODEL_PATH의 이름과 assets에 저장한 모델의 이름이 일치하는 지 확인할 것!
 3. 2번과 마찬가지로 같은 파일의 LABEL_PATH의 이름과 assets에 저장한 라벨의 이름이 일치하는 지 확인할 것!
-
-
+<br>
+<br>
 #### 결과물 소개
  <div>
  <img width="200" src="https://user-images.githubusercontent.com/48276736/59682012-3fdb9d00-9210-11e9-8960-0d9e0a09640f.jpg">
@@ -113,23 +110,20 @@ Android SDK 27 Version
  </div>
  
  8. 이번에는 보쌈에서 watch in youtube 부분을 눌러보면 오른쪽과 같이 유튜브의 보쌈 레시피 영상을 볼 수 있다.
-
-
+<br>
+<br>
 #### 모델 성능 평가
 <img src="https://user-images.githubusercontent.com/48276736/59683898-f0976b80-9213-11e9-9d3b-339cb799d7a2.PNG">
  recall_5 약 99%, accuracy 약 91.5% 의 성능을 보인다. <br>
  어플리케이션에서 동작할 경우에는 lite로 변환함에 따라서 성능이 약간 저하된다.
-          
-
+<br>     
+<br>
 #### 참고 github link
 https://github.com/amitshekhariitbhu/Android-TensorFlow-Lite-Example
-
-
+<br>
+<br>
 #### 문의
-응웬딩흐엉 nguyenhuonghq97@gmail.com
-
-임성두 sungdoolim@naver.com
-
-정세인 wnddkdpckqd@gmail.com
-
+응웬딩흐엉 nguyenhuonghq97@gmail.com <br>
+임성두 sungdoolim@naver.com <br>
+정세인 wnddkdpckqd@gmail.com <br>
 탁성환 z0116z@naver.com
