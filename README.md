@@ -31,7 +31,7 @@ Android SDK 27 Version
 #### 실행 방법
 1. github에 올라와있는 파일을 다운로드 후 Android Studio에서 Android-TensorFlow 폴더를 open.
 2. 구글 드라이브 링크로 들어가 모델을 다운로드 후 Android-TensorFlow/app/src/main/assets/ 에 저장.
-3. 1번의 방법대로 open 후 build 하여 휴대전화와 연결 후 run 하거나 build apk 이후 휴대전화에 다운로드하여 설치.
+3. 1번의 방법대로 open 후 build 하여 휴대전화와 연결 후 run 하거나 build apk 이후 휴대전화에 다운로드하여 설치.<br>
 또는 구글 드라이브 링크로 들어가 apk를 다운로드 후 설치.
 <br>
 <br>
