@@ -113,6 +113,12 @@ Android SDK 27 Version
  8. 이번에는 보쌈에서 watch in youtube 부분을 눌러보면 오른쪽과 같이 유튜브의 보쌈 레시피 영상을 볼 수 있다.
 
 
+#### 모델 성능 평가
+<img src="https://user-images.githubusercontent.com/48276736/59683898-f0976b80-9213-11e9-9d3b-339cb799d7a2.PNG>
+ recall_5 약 99%, accuracy 약 91.5% 의 성능을 보인다.
+ 어플리케이션에서의 동작할 경우에는 lite로 변환함에 따라서 성능이 약간 저하된다.
+          
+
 #### 참고 github link
 https://github.com/amitshekhariitbhu/Android-TensorFlow-Lite-Example
 
