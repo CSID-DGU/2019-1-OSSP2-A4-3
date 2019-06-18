@@ -20,8 +20,8 @@ Android SDK 27 Version
 
 
 #### 프로젝트 설명
- 이 프로젝트는 한국에 방문하는 외국인들이 이름을 잘 모르는 한식을 먹고 싶을 때 사진을 찍어서 주변 음식점을 찾을 수 있도록 하기 위해 시작!
- 모델 링크 : https://drive.google.com/open?id=1OwwKwRP7kqvcnL1O-8IBgd5NGHPVnFcg
+ 이 프로젝트는 한국에 방문하는 외국인들이 이름을 잘 모르는 한식을 먹고 싶을 때 사진을 찍어서 주변 음식점을 찾을 수 있도록 하기 위해 시작!<br>
+ 모델 링크 : https://drive.google.com/open?id=1OwwKwRP7kqvcnL1O-8IBgd5NGHPVnFcg <br>
  apk 링크 : https://drive.google.com/open?id=1qHBacAkuZTnvCiBh2YVdxEtyPZoJRCOv
 
 
