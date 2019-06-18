@@ -24,7 +24,7 @@ Android SDK 27 Version
  모델의 architecture는 inception resnet v2 를 사용하였다.<br>
  (이름은 mobilenet_quant_v1_224로 되어있지만 관계없음)<br>
  모델 링크 : https://drive.google.com/open?id=1OwwKwRP7kqvcnL1O-8IBgd5NGHPVnFcg <br>
- apk 링크 : https://drive.google.com/open?id=1qHBacAkuZTnvCiBh2YVdxEtyPZoJRCOv
+ apk 링크 : https://drive.google.com/open?id=1t7tWWlJm9bKKvLjRgvJJgX2zfoLMZ_Gc
 <br>
 <br>
 
